@@ -19,9 +19,12 @@ var ProductItem = React.createClass({
         var product = this.props.product;
 
         return (
-            <div>
-                <div>{product.title} - &euro;{product.price}</div>
-                <button onClick={this.addToCart}>Add to cart</button>
+            <div className="uk-panel uk-panel-box">
+                <img className="uk-thumbnail uk-thumbnail-mini" src={product.image} />
+                <h3 className="uk-h4">{product.title} - &euro;{product.price}</h3>
+                <button className="uk-button uk-button-small uk-button-primary" onClick={this.addToCart}>
+                    Add to cart
+                </button>
             </div>
         );
     }
@@ -46,8 +49,8 @@ var ProductsList = React.createClass({
         });
 
         return (
-            <div>
-                <h3>Products in our shop:</h3>
+            <div className="shop-wrap">
+                <h1 className="uk-h2">Products in our shop:</h1>
                 <div>{nodes}</div>
             </div>
         );

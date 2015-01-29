@@ -1,0 +1,12 @@
+.shop-wrap {
+    max-width: 900px;
+    width: 60%;
+    margin: 20px 25px;
+}
+.shop-wrap .uk-panel {
+    margin-bottom: 15px;
+}
+.shop-wrap .uk-thumbnail {
+    float: left;
+    margin-right: 20px;
+}

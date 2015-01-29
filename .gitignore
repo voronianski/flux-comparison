@@ -1,8 +1,5 @@
 .DS_Store
 node_modules
-public/bower_components
-public/components
-public/build
-public/js/bundle.js
-public/js/bundle.min.js
+bower_components
+facebook-flux/build
 *.log

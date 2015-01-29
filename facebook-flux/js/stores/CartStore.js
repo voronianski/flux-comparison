@@ -1,7 +1,9 @@
+'use strict';
+
 var EventEmitter = require('events').EventEmitter;
 var assign = require('object-assign');
-var AppDispatcher = require('../AppDispatcher');
-var Constants = require('../Constants');
+var AppDispatcher = require('../dispatcher/AppDispatcher');
+var Constants = require('../constants/AppConstants');
 
 var ActionTypes = Constants.ActionTypes;
 var CHANGE_EVENT = 'change';

@@ -1,5 +1,5 @@
 var shop = require('../../../common/api/shop');
-var ActionCreators = require('../ActionCreators');
+var ActionCreators = require('../actions/ActionCreators');
 
 module.exports = {
     getAllProducts: function () {

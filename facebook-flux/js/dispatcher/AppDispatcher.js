@@ -1,5 +1,8 @@
+'use strict';
+
 var Dispatcher = require('flux').Dispatcher;
-var Constants = require('./Constants');
+var Constants = require('../constants/AppConstants');
+
 var PayloadSources = Constants.PayloadSources;
 
 var AppDispatcher = new Dispatcher();

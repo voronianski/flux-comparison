@@ -1,3 +1,5 @@
+'use strict';
+
 var React = require('react');
 var Cart = require('./Cart.jsx');
 var Products = require('./Products.jsx');

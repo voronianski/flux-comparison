@@ -1,8 +1,10 @@
+'use strict';
+
 var React = require('react');
 var ProductStore = require('../stores/ProductStore');
-var ActionCreators = require('../ActionCreators');
+var ActionCreators = require('../actions/ActionCreators');
 
-function getStateFromStores () {
+function _getStateFromStores () {
     return {
         products: ProductStore.getAllProducts()
     };
@@ -27,7 +29,7 @@ var ProductItem = React.createClass({
 
 var ProductsList = React.createClass({
     getInitialState: function () {
-        return getStateFromStores();
+        return _getStateFromStores();
     },
 
     componentDidMount: function () {
@@ -52,7 +54,7 @@ var ProductsList = React.createClass({
     },
 
     _onChange: function () {
-        this.setState(getStateFromStores());
+        this.setState(_getStateFromStores());
     }
 });
 

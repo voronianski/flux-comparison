@@ -1,8 +1,10 @@
+'use strict';
+
 var React = require('react');
 var CartStore = require('../stores/CartStore');
-var ActionCreators = require('../ActionCreators');
+var ActionCreators = require('../actions/ActionCreators');
 
-function getStateFromStores () {
+function _getStateFromStores () {
     return {
         products: CartStore.getAddedProducts(),
         total: CartStore.getTotal()
@@ -17,7 +19,7 @@ var Product = React.createClass({
 
 var Cart = React.createClass({
     getInitialState: function () {
-        return getStateFromStores();
+        return _getStateFromStores();
     },
 
     componentDidMount: function () {
@@ -53,7 +55,7 @@ var Cart = React.createClass({
     },
 
     _onChange: function () {
-        this.setState(getStateFromStores());
+        this.setState(_getStateFromStores());
     }
 });
 

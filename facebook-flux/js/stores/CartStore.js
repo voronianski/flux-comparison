@@ -56,9 +56,13 @@ CartStore.dispatchToken = AppDispatcher.register(function (payload) {
             _addToCart(action.product);
             CartStore.emitChange();
             break;
-        case ActionTypes.CHECKOUT_CART:
+        case ActionTypes.CART_CHECKOUT:
             _products = {};
             CartStore.emitChange();
+            break;
+        case ActionTypes.SUCCESS_CHECKOUT:
+            // this can be used to redirect to success page, etc.
+            console.log('YOU BOUGHT:', action.products);
             break;
         default:
     }

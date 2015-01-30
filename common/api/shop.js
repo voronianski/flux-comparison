@@ -17,9 +17,7 @@ Shop.getProducts = function (cb, timeout) {
 };
 
 Shop.buyProducts = function (payload, cb, timeout) {
-    console.log(payload);
     timeout = timeout || TIMEOUT;
-
     setTimeout(function () {
         cb();
     }, timeout);

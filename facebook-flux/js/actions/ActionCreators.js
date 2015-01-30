@@ -30,3 +30,10 @@ ActionsCreators.cartCheckout = function (products) {
 
     WebAPIUtils.checkoutProducts(products);
 };
+
+ActionsCreators.finishCheckout = function (products) {
+    AppDispatcher.handleServerAction({
+        type: ActionTypes.SUCCESS_CHECKOUT,
+        products: products
+    });
+};

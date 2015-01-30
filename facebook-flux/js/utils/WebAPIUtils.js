@@ -12,7 +12,7 @@ module.exports = {
 
     checkoutProducts: function (products) {
         shop.buyProducts(products, function () {
-            // success action
+            ActionCreators.finishCheckout(products);
         });
     }
 };

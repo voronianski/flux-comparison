@@ -7,8 +7,10 @@ var Shop = exports;
 
 var _products = require('./products.json');
 
+var TIMEOUT = 100;
+
 Shop.getProducts = function (cb, timeout) {
-    timeout = timeout || 100;
+    timeout = timeout || TIMEOUT;
     setTimeout(function () {
         cb(_products);
     }, timeout);
@@ -16,7 +18,7 @@ Shop.getProducts = function (cb, timeout) {
 
 Shop.buyProducts = function (payload, cb, timeout) {
     console.log(payload);
-    timeout = timeout || 100;
+    timeout = timeout || TIMEOUT;
 
     setTimeout(function () {
         cb();

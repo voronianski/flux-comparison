@@ -38,18 +38,25 @@ var Cart = React.createClass({
     },
 
     render: function () {
-        var nodes = !this.state.products.length ?
-            <div>No products added</div> :
-            this.state.products.map(function (p) {
+        var products = this.state.products;
+
+        var hasProducts = products.length > 0;
+        var nodes = !hasProducts ?
+            <div>Please add some products to cart.</div> :
+            products.map(function (p) {
                 return <Product key={p.id}>{p.title} - &euro;{p.price} x {p.quantity}</Product>;
             });
 
         return (
-            <div>
-                <h3>Cart products:</h3>
-                <div>{nodes}</div>
-                <div>Pay: {this.state.total}</div>
-                <button onClick={this.checkout}>Checkout!</button>
+            <div className="cart uk-panel uk-panel-box uk-panel-box-primary">
+                <div className="uk-badge uk-margin-bottom">Your Cart</div>
+                <div className="uk-margin-small-bottom">{nodes}</div>
+                <div className="uk-margin-small-bottom">Total: &euro;{this.state.total}</div>
+                <button className="uk-button uk-button-large uk-button-success uk-align-right"
+                    onClick={this.checkout}
+                    disabled={hasProducts ? '' : 'disabled'}>
+                    Checkout
+                </button>
             </div>
         );
     },

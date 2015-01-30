@@ -3,10 +3,8 @@
     width: 60%;
     margin: 20px 25px;
 }
-.shop-wrap .uk-panel {
-    margin-bottom: 15px;
-}
-.shop-wrap .uk-thumbnail {
-    float: left;
-    margin-right: 20px;
+.cart {
+    position: fixed;
+    right: 50px;
+    top: 30px;
 }

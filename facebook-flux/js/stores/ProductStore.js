@@ -10,6 +10,10 @@ var CHANGE_EVENT = 'change';
 
 var _products = [];
 
+function _decreaseInventory (product) {
+    product.inventory = product.inventory > 0 ? product.inventory-1 : 0;
+}
+
 var ProductStore = assign({}, EventEmitter.prototype, {
     getAllProducts: function () {
         return _products;
@@ -34,6 +38,10 @@ ProductStore.dispatchToken = AppDispatcher.register(function (payload) {
     switch (action.type) {
         case ActionTypes.RECEIVE_PRODUCTS:
             _products = action.products;
+            ProductStore.emitChange();
+            break;
+        case ActionTypes.ADD_TO_CART:
+            _decreaseInventory(action.product);
             ProductStore.emitChange();
             break;
         default:

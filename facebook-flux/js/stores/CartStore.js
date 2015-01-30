@@ -5,6 +5,8 @@ var assign = require('object-assign');
 var AppDispatcher = require('../dispatcher/AppDispatcher');
 var Constants = require('../constants/AppConstants');
 
+var ProductStore = require('./ProductStore');
+
 var ActionTypes = Constants.ActionTypes;
 var CHANGE_EVENT = 'change';
 
@@ -50,6 +52,7 @@ CartStore.dispatchToken = AppDispatcher.register(function (payload) {
 
     switch (action.type) {
         case ActionTypes.ADD_TO_CART:
+            AppDispatcher.waitFor([ProductStore.dispatchToken]);
             _addToCart(action.product);
             CartStore.emitChange();
             break;

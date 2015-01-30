@@ -19,11 +19,13 @@ var ProductItem = React.createClass({
         var product = this.props.product;
 
         return (
-            <div className="uk-panel uk-panel-box">
-                <img className="uk-thumbnail uk-thumbnail-mini" src={product.image} />
-                <h3 className="uk-h4">{product.title} - &euro;{product.price}</h3>
-                <button className="uk-button uk-button-small uk-button-primary" onClick={this.addToCart}>
-                    Add to cart
+            <div className="uk-panel uk-panel-box uk-margin-bottom">
+                <img className="uk-thumbnail uk-thumbnail-mini uk-align-left" src={product.image} />
+                <h4 className="uk-h4">{product.title} - &euro;{product.price}</h4>
+                <button className="uk-button uk-button-small uk-button-primary"
+                    onClick={this.addToCart}
+                    disabled={product.inventory > 0 ? '' : 'disabled'}>
+                    {product.inventory > 0 ? 'Add to cart' : 'Sold Out'}
                 </button>
             </div>
         );
@@ -50,7 +52,7 @@ var ProductsList = React.createClass({
 
         return (
             <div className="shop-wrap">
-                <h1 className="uk-h2">Products in our shop:</h1>
+                <h2 className="uk-h2">Flux Shop Demo</h2>
                 <div>{nodes}</div>
             </div>
         );

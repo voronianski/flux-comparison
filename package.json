@@ -10,6 +10,8 @@
   "author": "Dmitri Voronianski <dmitri.voronianski@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "array.prototype.find": "^1.0.0",
+    "es5-shim": "^4.0.6",
     "flux": "^2.0.1",
     "object-assign": "^2.0.0",
     "react": "^0.12.2",

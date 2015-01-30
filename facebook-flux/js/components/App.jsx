@@ -9,7 +9,6 @@ var App = React.createClass({
         return (
             <div>
                 <Products />
-                <hr />
                 <Cart />
             </div>
         );

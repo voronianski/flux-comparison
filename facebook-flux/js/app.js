@@ -2,7 +2,6 @@
 
 require('es5-shim');
 require('es5-shim/es5-sham');
-require('array.prototype.find'); // es6-shim
 
 var React = require('react');
 var App = require('./components/App.jsx');

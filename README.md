@@ -4,6 +4,10 @@
 
 > Similar app implemented with different [Flux](https://facebook.github.io/flux/) solutions including Facebook's, Yahoo's and others. 
 
+### [Demo](http://labs.voronianski.com/flux-samples) [About](http://pixelhunter.me/)
+
+[![](https://farm9.staticflickr.com/8643/16226391077_abc5974488_o.png)]()
+
 ## Resources
 
 - https://github.com/facebook/flux

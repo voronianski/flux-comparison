@@ -3,10 +3,12 @@
 [![](http://img.shields.io/badge/Status-In%20Progress-green.svg?style=flat)](https://github.com/voronianski/telepath-mini/commits/master)
 
 > Similar app implemented with different [Flux](https://facebook.github.io/flux/) solutions including Facebook's, Yahoo's and others. 
-
-### [Demo](http://labs.voronianski.com/flux-samples) [About](http://pixelhunter.me/)
-
+> 
 [![](https://farm9.staticflickr.com/8643/16226391077_abc5974488_o.png)]()
+
+### ☞ [Article](http://pixelhunter.me/)
+
+### ☞ [Demo](http://labs.voronianski.com/flux-samples) 
 
 ## Resources
 

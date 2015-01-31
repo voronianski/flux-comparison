@@ -24,9 +24,10 @@
 - http://facebook.github.io/react/blog/2014/07/30/flux-actions-and-the-dispatcher.html
 - https://github.com/facebook/flux/blob/master/examples/flux-chat
 - http://www.code-experience.com/async-requests-with-react-js-and-flux-revisited
-- https://github.com/yahoo/flux-examples
+- https://github.com/yahoo/fluxible
 - https://github.com/yahoo/dispatchr
-- https://github.com/yahoo/fetchr
+- https://github.com/yahoo/flux-examples
 - https://github.com/spoike/refluxjs
+- http://spoike.ghost.io/deconstructing-reactjss-flux/
 - http://deloreanjs.com
 - http://fluxxor.com

@@ -33,8 +33,8 @@ The list of Flux related implementations used in this demo.
 ### Next
 
 * [ ] Fluxxor
-* [ ] Delorean.js
 * [ ] Marty.js
+* [ ] Delorean.js
 
 ## Resources
 

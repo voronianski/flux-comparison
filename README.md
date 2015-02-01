@@ -4,9 +4,9 @@
 
 > Similar app implemented with different [Flux](https://facebook.github.io/flux/) solutions including Facebook's, Yahoo's and others. 
 
-[![](https://farm9.staticflickr.com/8643/16226391077_424b0a87dd.jpg)]()
+### [Read](http://pixelhunter.me/)
 
-### [Read](http://pixelhunter.me/) 
+[![](https://farm9.staticflickr.com/8643/16226391077_424b0a87dd.jpg)]()
 
 ## Usage
 
@@ -18,7 +18,7 @@ http://labs.voronianski.com/flux-samples
 
 * [x] [Original Facebook Flux](https://github.com/voronianski/flux-samples/tree/master/facebook-flux)
 * [x] [Fluxible by Yahoo](https://github.com/voronianski/flux-samples/tree/master/yahoo-fluxible)
-* [x] Reflux
+* [x] [Reflux](https://github.com/voronianski/flux-samples/tree/master/reflux)
 * [ ] Fluxxor
 * [ ] Delorean.js
 

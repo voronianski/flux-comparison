@@ -42,7 +42,7 @@ The lists of code resources that were used to build this demo and articles that 
 - https://github.com/spoike/refluxjs
 - http://fluxxor.com
 - http://deloreanjs.com
-- 
+
 ### Articles
 
 - http://facebook.github.io/react/blog/2014/07/30/flux-actions-and-the-dispatcher.html

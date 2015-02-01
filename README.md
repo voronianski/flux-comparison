@@ -6,15 +6,19 @@
 
 [![](https://farm9.staticflickr.com/8643/16226391077_424b0a87dd.jpg)]()
 
-### [☞ Blog Post](http://pixelhunter.me/) 
+### [Read](http://pixelhunter.me/) 
 
-### [☞ Demo](http://labs.voronianski.com/flux-samples) 
+## Usage
+
+## Demo
+
+http://labs.voronianski.com/flux-samples
 
 ## Examples
 
 * [x] [Original Facebook Flux](https://github.com/voronianski/flux-samples/tree/master/facebook-flux)
 * [x] [Fluxible by Yahoo](https://github.com/voronianski/flux-samples/tree/master/yahoo-fluxible)
-* [ ] Reflux
+* [x] Reflux
 * [ ] Fluxxor
 * [ ] Delorean.js
 

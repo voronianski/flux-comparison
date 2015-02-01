@@ -10,11 +10,19 @@
 
 ## Usage
 
+Clone this repo and run `npm install` inside it. 
+
+Before checking any of the included apps you will need to build its' Javascript resources with [Browserify](http://browserify.org/) by running `npm start` inside concrete app folder. 
+
+Then you will be able to check `index.html` in your favorite browser up and running.
+
 ## Demo
 
 http://labs.voronianski.com/flux-samples
 
 ## Examples
+
+The list of Flux related implementations used in this demo.
 
 * [x] [Original Facebook Flux](https://github.com/voronianski/flux-samples/tree/master/facebook-flux)
 * [x] [Fluxible by Yahoo](https://github.com/voronianski/flux-samples/tree/master/yahoo-fluxible)
@@ -24,14 +32,19 @@ http://labs.voronianski.com/flux-samples
 
 ## Resources
 
+The lists of code resources that were used to build this demo and articles that are useful to read.
+
+### Libraries
+
 - https://github.com/facebook/flux
-- http://facebook.github.io/react/blog/2014/07/30/flux-actions-and-the-dispatcher.html
-- https://github.com/facebook/flux/blob/master/examples/flux-chat
-- http://www.code-experience.com/async-requests-with-react-js-and-flux-revisited
 - https://github.com/yahoo/fluxible
 - https://github.com/yahoo/dispatchr
-- https://github.com/yahoo/flux-examples
 - https://github.com/spoike/refluxjs
-- http://spoike.ghost.io/deconstructing-reactjss-flux/
-- http://deloreanjs.com
 - http://fluxxor.com
+- http://deloreanjs.com
+- 
+### Articles
+
+- http://facebook.github.io/react/blog/2014/07/30/flux-actions-and-the-dispatcher.html
+- http://www.code-experience.com/async-requests-with-react-js-and-flux-revisited
+- http://spoike.ghost.io/deconstructing-reactjss-flux

@@ -5,7 +5,7 @@ var createStore = require('fluxible/utils/createStore');
 var ProductStore = createStore({
     storeName: 'ProductStore',
 
-    initialize: function (argument) {
+    initialize: function () {
         this._products = [];
     },
 

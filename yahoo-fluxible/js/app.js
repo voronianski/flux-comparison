@@ -7,6 +7,7 @@ var React = require('react');
 var Fluxible = require('fluxible');
 
 var App = require('./components/App.jsx');
+
 var CartStore = require('./stores/CartStore');
 var ProductStore = require('./stores/ProductStore');
 var receiveProducts = require('./actions/receiveProducts');
@@ -24,7 +25,7 @@ context.executeAction(receiveProducts, {}, function (err) {
 
     React.render(
         React.createElement(App, {context: context.getComponentContext()}),
-        document.getElementById('flux-app')
+        document.getElementById('fluxible-app')
     );
 });
 

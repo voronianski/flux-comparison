@@ -6,7 +6,7 @@ var assign = require('object-assign');
 var CartStore = createStore({
     storeName: 'CartStore',
 
-    initialize: function (argument) {
+    initialize: function () {
         this._products = {};
     },
 

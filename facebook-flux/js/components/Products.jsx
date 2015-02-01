@@ -52,7 +52,7 @@ var ProductsList = React.createClass({
 
         return (
             <div className="shop-wrap">
-                <h2 className="uk-h2">Flux Shop Demo</h2>
+                <h2 className="uk-h2">Flux Shop Demo (Facebook)</h2>
                 <div>{nodes}</div>
             </div>
         );

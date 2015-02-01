@@ -22,7 +22,7 @@ http://labs.voronianski.com/flux-samples
 
 ## Examples
 
-The list of Flux related implementations used in this demo.
+The list of Flux related implementations used in this demo:
 
 * [x] [Original Facebook Flux](https://github.com/voronianski/flux-samples/tree/master/facebook-flux)
 * [x] [Fluxible by Yahoo](https://github.com/voronianski/flux-samples/tree/master/yahoo-fluxible)
@@ -31,8 +31,6 @@ The list of Flux related implementations used in this demo.
 * [ ] Delorean.js
 
 ## Resources
-
-The lists of code resources that were used to build this demo and articles that are useful to read.
 
 ### Libraries
 

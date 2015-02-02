@@ -1,10 +1,10 @@
-# Flux Samples
+# Flux Comparison by Example
 
 [![](http://img.shields.io/badge/Status-In%20Progress-green.svg?style=flat)](https://github.com/voronianski/telepath-mini/commits/master)
 
 > Similar app implemented with different [Flux](https://facebook.github.io/flux/) solutions including Facebook's, Yahoo's and others. 
 
-### [Read](http://pixelhunter.me/)
+### [Read More](http://pixelhunter.me/)
 
 [![](https://farm9.staticflickr.com/8643/16226391077_424b0a87dd.jpg)]()
 
@@ -12,9 +12,7 @@
 
 Clone this repo and run `npm install` inside it. 
 
-Before checking any of the included apps you will need to build its' Javascript resources with [Browserify](http://browserify.org/) by running `npm start` inside concrete app folder. 
-
-Then you will be able to check `index.html` in your favorite browser up and running.
+Before checking any of the included apps you will need to build its' Javascript resources with [Browserify](http://browserify.org/) by running `npm start` inside concrete app folder.
 
 ## Demo
 
@@ -45,8 +43,8 @@ The list of Flux related implementations used in this demo.
 - https://github.com/yahoo/dispatchr
 - https://github.com/spoike/refluxjs
 - http://fluxxor.com
-- http://deloreanjs.com
 - http://martyjs.org
+- http://deloreanjs.com
 
 ### Articles
 

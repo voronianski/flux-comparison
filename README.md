@@ -2,7 +2,7 @@
 
 > Similar app implemented with different [Flux](https://facebook.github.io/flux/) solutions including Facebook's, Yahoo's and others. 
 
-### [Read More](http://pixelhunter.me/)
+<!-- ### [Read More](http://pixelhunter.me/) -->
 
 [![](https://farm9.staticflickr.com/8643/16226391077_424b0a87dd.jpg)]()
 

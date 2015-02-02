@@ -14,7 +14,7 @@ Before checking any of the included apps you will need to build its' Javascript 
 
 ## Demo
 
-http://labs.voronianski.com/flux-samples
+http://labs.voronianski.com/flux-comparison
 
 ## Examples
 

@@ -2,7 +2,7 @@
 
 > Similar app implemented with different [Flux](https://facebook.github.io/flux/) solutions including Facebook's, Yahoo's and others. 
 
-<!-- ### [Read More](http://pixelhunter.me/) -->
+<!-- ### [Read more](http://pixelhunter.me/) -->
 
 [![](https://farm9.staticflickr.com/8643/16226391077_424b0a87dd.jpg)]()
 
@@ -55,3 +55,7 @@ The list of Flux related implementations used in this demo.
 - http://facebook.github.io/react/blog/2014/07/30/flux-actions-and-the-dispatcher.html
 - http://www.code-experience.com/async-requests-with-react-js-and-flux-revisited
 - http://spoike.ghost.io/deconstructing-reactjss-flux
+
+---
+
+**MIT Licensed**

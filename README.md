@@ -1,7 +1,5 @@
 # Flux Comparison by Example
 
-[![](http://img.shields.io/badge/Status-In%20Progress-green.svg?style=flat)](https://github.com/voronianski/telepath-mini/commits/master)
-
 > Similar app implemented with different [Flux](https://facebook.github.io/flux/) solutions including Facebook's, Yahoo's and others. 
 
 ### [Read More](http://pixelhunter.me/)

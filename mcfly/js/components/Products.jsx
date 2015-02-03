@@ -33,7 +33,6 @@ var ProductItem = React.createClass({
 });
 
 var ProductsList = React.createClass({
-
     mixins: [ProductStore.mixin],
 
     getInitialState: function () {

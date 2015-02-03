@@ -12,6 +12,7 @@
   "author": "Dmitri Voronianski <dmitri.voronianski@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "alt": "^0.10.1",
     "array.prototype.find": "^1.0.0",
     "es5-shim": "^4.0.6",
     "flux": "^2.0.1",
@@ -22,6 +23,8 @@
     "reflux": "^0.2.4"
   },
   "devDependencies": {
+    "6to5": "^3.3.4",
+    "6to5ify": "^4.0.0",
     "browserify": "^8.0.3",
     "envify": "^3.2.0",
     "reactify": "^0.17.1",

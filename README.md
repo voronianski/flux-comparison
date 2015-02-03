@@ -28,7 +28,7 @@ The list of Flux related implementations used in this demo.
 
 ### Ready
 
-* [x] [Original Facebook Flux](https://github.com/voronianski/flux-samples/tree/master/facebook-flux)
+* [x] [Facebook Flux](https://github.com/voronianski/flux-samples/tree/master/facebook-flux)
 * [x] [Fluxible by Yahoo](https://github.com/voronianski/flux-samples/tree/master/yahoo-fluxible)
 * [x] [Reflux](https://github.com/voronianski/flux-samples/tree/master/reflux)
 * [x] [Alt](https://github.com/voronianski/flux-samples/tree/master/alt)

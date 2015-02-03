@@ -19,10 +19,9 @@ var CartStore = Marty.createStore({
     },
 
     onAddToCart: function (product) {
-        var id = product.id;
-
         this.waitFor(ProductStore);
 
+        var id = product.id;
         product.quantity = id in this.state ? this.state[id].quantity + 1 : 1;
         this.state[id] = assign({}, product[id], product);
         this.hasChanged();

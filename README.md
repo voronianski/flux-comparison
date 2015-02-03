@@ -14,7 +14,7 @@ Before checking any of the included apps you will need to build its' Javascript 
 
 ## Demo
 
-Select several products from _Flux Online Shop_ and add them to cart. Open browser console and click _Checkout_ button, you'll see payload of products that you just "bought".
+Select several products from _Flux Online Shop_ and add them to cart. Open browser console and click _Checkout_ button, you'll see payload with products that you just "bought".
 
 [![](https://dl.dropboxusercontent.com/u/100463011/flux-shop-demo2.gif)](http://labs.voronianski.com/flux-comparison)
 

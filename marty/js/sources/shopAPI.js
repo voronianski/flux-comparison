@@ -1,3 +1,5 @@
+'use strict';
+
 var Marty = require('marty');
 var Shop = require('../../../common/api/shop');
 var CartSourceActionCreators = require('../actions/cartSourceActionCreators');
@@ -10,7 +12,7 @@ var ShopAPI = Marty.createStateSource({
                 ProductSourceActionCreators.receiveProducts(products);
                 resolve();
             });
-        })
+        });
     },
     checkoutProducts: function (products) {
         return new Promise(function (resolve) {

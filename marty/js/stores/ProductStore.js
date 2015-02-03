@@ -7,21 +7,26 @@ var ProductConstants = require('../constants/productConstants');
 
 var ProductStore = Marty.createStore({
     displayName: 'Products',
+
     handlers: {
         onAddToCart: CartConstants.ADD_TO_CART,
         receiveProducts: ProductConstants.RECEIVE_PRODUCTS
     },
+
     getInitialState: function () {
         return [];
     },
+
     receiveProducts: function (products) {
         this.state = products;
         this.hasChanged();
     },
+
     onAddToCart: function (product) {
         product.inventory = product.inventory > 0 ? product.inventory-1 : 0;
         this.hasChanged();
     },
+
     getAllProducts: function () {
         return this.fetch({
             id: 'products',
@@ -38,5 +43,3 @@ var ProductStore = Marty.createStore({
 });
 
 module.exports = ProductStore;
-
-

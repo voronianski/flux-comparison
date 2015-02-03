@@ -6,38 +6,12 @@ var ProductStore = require('../stores/ProductStore');
 var CartActionCreators = require('../actions/cartActionCreators');
 
 var ProductsState = Marty.createStateMixin({
-  listenTo: ProductStore,
-  getState: function () {
-    return {
-      products: ProductStore.getAllProducts()
-    }
-  }
-});
+    listenTo: ProductStore,
 
-var ProductsList = React.createClass({
-    mixins: [ProductsState],
-    render: function () {
-        return (
-            <div className="shop-wrap">
-                <h2 className="uk-h2">Flux Shop Demo (Marty)</h2>
-                <div>{this.renderProducts()}</div>
-            </div>
-        );
-    },
-    renderProducts: function () {
-        return this.state.products.when({
-            pending: function () {
-                return this.done([]);
-            },
-            failed: function (error) {
-                return <div className="error">{error}</div>;
-            },
-            done: function (products) {
-                return products.map(function (product) {
-                    return <ProductItem key={product.id} product={product} />;
-                });
-            }
-        })
+    getState: function () {
+        return {
+            products: ProductStore.getAllProducts()
+        };
     }
 });
 
@@ -45,6 +19,7 @@ var ProductItem = React.createClass({
     addToCart: function () {
         CartActionCreators.addToCart(this.props.product);
     },
+
     render: function () {
         var product = this.props.product;
         var label = product.inventory > 0 ? 'Add to cart' : 'Sold Out';
@@ -63,5 +38,33 @@ var ProductItem = React.createClass({
     }
 });
 
+var ProductsList = React.createClass({
+    mixins: [ProductsState],
+
+    render: function () {
+        return (
+            <div className="shop-wrap">
+                <h2 className="uk-h2">Flux Shop Demo (Marty)</h2>
+                <div>{this.renderProducts()}</div>
+            </div>
+        );
+    },
+
+    renderProducts: function () {
+        return this.state.products.when({
+            pending: function () {
+                return this.done([]);
+            },
+            failed: function (error) {
+                return <div className="error">{error}</div>;
+            },
+            done: function (products) {
+                return products.map(function (product) {
+                    return <ProductItem key={product.id} product={product} />;
+                });
+            }
+        });
+    }
+});
 
 module.exports = ProductsList;

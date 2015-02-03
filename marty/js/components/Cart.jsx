@@ -7,6 +7,7 @@ var CartActionCreators = require('../actions/cartActionCreators');
 
 var CartState = Marty.createStateMixin({
     listenTo: CartStore,
+
     getState: function () {
         return {
             products: CartStore.getAddedProducts(),
@@ -15,14 +16,22 @@ var CartState = Marty.createStateMixin({
     }
 });
 
+var Product = React.createClass({
+    render: function () {
+        return <div>{this.props.children}</div>;
+    }
+});
+
 var Cart = React.createClass({
     mixins: [CartState],
+
     checkout: function () {
         if (!this.state.products.length) {
           return;
         }
         CartActionCreators.cartCheckout(this.state.products);
     },
+
     render: function () {
         var nodes;
         var products = this.state.products;
@@ -48,12 +57,6 @@ var Cart = React.createClass({
                 </button>
             </div>
         );
-    }
-});
-
-var Product = React.createClass({
-    render: function () {
-        return <div>{this.props.children}</div>;
     }
 });
 

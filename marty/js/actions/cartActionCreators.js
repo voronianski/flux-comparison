@@ -11,6 +11,7 @@ var CartActionCreators = Marty.createActionCreators({
         this.dispatch(product);
     },
     cartCheckout: function (products) {
+        this.dispatch(products);
         ShopAPI.checkoutProducts(products);
     }
 });

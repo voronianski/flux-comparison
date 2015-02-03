@@ -32,11 +32,11 @@ The list of Flux related implementations used in this demo.
 * [x] [Fluxible by Yahoo](https://github.com/voronianski/flux-samples/tree/master/yahoo-fluxible)
 * [x] [Reflux](https://github.com/voronianski/flux-samples/tree/master/reflux)
 * [x] [Alt](https://github.com/voronianski/flux-samples/tree/master/alt)
+* [x] [Marty.js](https://github.com/voronianski/flux-samples/tree/master/marty)
 
 ### Next
 
 * [ ] Fluxxor
-* [ ] Marty.js
 * [ ] Delorean.js
 
 ## Resources

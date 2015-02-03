@@ -33,6 +33,7 @@ The list of Flux related implementations used in this demo.
 * [x] [Reflux](https://github.com/voronianski/flux-samples/tree/master/reflux)
 * [x] [Alt](https://github.com/voronianski/flux-samples/tree/master/alt)
 * [x] [Marty.js](https://github.com/voronianski/flux-samples/tree/master/marty)
+* [x] [McFly](https://github.com/voronianski/flux-samples/tree/master/mcfly)
 
 ### Next
 
@@ -48,8 +49,9 @@ The list of Flux related implementations used in this demo.
 - https://github.com/yahoo/dispatchr
 - https://github.com/spoike/refluxjs
 - https://github.com/goatslacker/alt
-- http://fluxxor.com
+- https://github.com/kenwheeler/mcfly
 - http://martyjs.org
+- http://fluxxor.com
 - http://deloreanjs.com
 
 ### Articles

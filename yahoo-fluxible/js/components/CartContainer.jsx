@@ -6,12 +6,6 @@ var StoreMixin = require('fluxible').StoreMixin;
 var CartStore = require('../stores/CartStore');
 var cartCheckout = require('../actions/cartCheckout');
 
-var Product = React.createClass({
-    render: function () {
-        return <div>{this.props.children}</div>;
-    }
-});
-
 var CartContainer = React.createClass({
     mixins: [StoreMixin],
 

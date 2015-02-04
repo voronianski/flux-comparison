@@ -23,7 +23,6 @@ var ProductItemContainer = React.createClass({
     },
 
     render: function () {
-        console.log(this.props.product);
         return (
             <ProductItem product={this.props.product} onAddToCartClicked={this.onAddToCartClicked} />
         );

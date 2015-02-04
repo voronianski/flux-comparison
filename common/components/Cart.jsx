@@ -16,7 +16,7 @@ var Cart = React.createClass({
             price: React.PropTypes.number.isRequired,
             quantity: React.PropTypes.number.isRequired,
         })).isRequired,
-        total: React.PropTypes.number.isRequired,
+        total: React.PropTypes.string.isRequired,
         onCheckoutClicked: React.PropTypes.func.isRequired
     },
 

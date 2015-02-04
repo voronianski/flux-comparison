@@ -1,15 +1,6 @@
 'use strict';
 
 var React = require('react');
-var CartStore = require('../stores/CartStore');
-var ActionCreators = require('../actions/ActionCreators');
-
-function _getStateFromStores () {
-    return {
-        products: CartStore.getAddedProducts(),
-        total: CartStore.getTotal()
-    };
-}
 
 var Product = React.createClass({
     render: function () {
@@ -18,27 +9,19 @@ var Product = React.createClass({
 });
 
 var Cart = React.createClass({
-    getInitialState: function () {
-        return _getStateFromStores();
-    },
-
-    componentDidMount: function () {
-        this.unsubscribe = CartStore.listen(this._onChange);
-    },
-
-    componentWillUnmount: function () {
-        this.unsubscribe();
-    },
-
-    checkout: function () {
-        if (!this.state.products.length) {
-            return;
-        }
-        ActionCreators.cartCheckout(this.state.products);
+    propTypes: {
+        products: React.PropTypes.arrayOf(React.PropTypes.shape({
+            id: React.PropTypes.number.isRequired,
+            title: React.PropTypes.string.isRequired,
+            price: React.PropTypes.number.isRequired,
+            quantity: React.PropTypes.number.isRequired,
+        })).isRequired,
+        total: React.PropTypes.number.isRequired,
+        onCheckoutClicked: React.PropTypes.func.isRequired
     },
 
     render: function () {
-        var products = this.state.products;
+        var products = this.props.products;
 
         var hasProducts = products.length > 0;
         var nodes = !hasProducts ?
@@ -51,19 +34,15 @@ var Cart = React.createClass({
             <div className="cart uk-panel uk-panel-box uk-panel-box-primary">
                 <div className="uk-badge uk-margin-bottom">Your Cart</div>
                 <div className="uk-margin-small-bottom">{nodes}</div>
-                <div className="uk-margin-small-bottom">Total: &euro;{this.state.total}</div>
+                <div className="uk-margin-small-bottom">Total: &euro;{this.props.total}</div>
                 <button className="uk-button uk-button-large uk-button-success uk-align-right"
-                    onClick={this.checkout}
+                    onClick={this.props.onCheckoutClicked}
                     disabled={hasProducts ? '' : 'disabled'}>
                     Checkout
                 </button>
             </div>
         );
     },
-
-    _onChange: function () {
-        this.setState(_getStateFromStores());
-    }
 });
 
 module.exports = Cart;

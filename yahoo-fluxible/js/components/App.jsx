@@ -1,15 +1,15 @@
 'use strict';
 
 var React = require('react');
-var Cart = require('./Cart.jsx');
-var Products = require('./Products.jsx');
+var CartContainer = require('./CartContainer.jsx');
+var ProductsContainer = require('./ProductsContainer.jsx');
 
 var App = React.createClass({
     render: function () {
         return (
             <div>
-                <Products context={this.props.context} />
-                <Cart context={this.props.context} />
+                <ProductsContainer context={this.props.context} />
+                <CartContainer context={this.props.context} />
             </div>
         );
     }

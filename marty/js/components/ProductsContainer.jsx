@@ -2,6 +2,8 @@
 
 var React = require('react');
 var Marty = require('marty');
+var ProductItem = require('../../../common/components/ProductItem.jsx');
+var ProductsList = require('../../../common/components/ProductsList.jsx');
 var ProductStore = require('../stores/ProductStore');
 var CartActionCreators = require('../actions/cartActionCreators');
 
@@ -15,38 +17,27 @@ var ProductsState = Marty.createStateMixin({
     }
 });
 
-var ProductItem = React.createClass({
-    addToCart: function () {
+var ProductItemContainer = React.createClass({
+    onAddToCartClicked: function () {
         CartActionCreators.addToCart(this.props.product);
     },
 
     render: function () {
-        var product = this.props.product;
-        var label = product.inventory > 0 ? 'Add to cart' : 'Sold Out';
-
+        console.log(this.props.product);
         return (
-            <div className="uk-panel uk-panel-box uk-margin-bottom">
-                <img className="uk-thumbnail uk-thumbnail-mini uk-align-left" src={product.image} />
-                <h4 className="uk-h4">{product.title} - &euro;{product.price}</h4>
-                <button className="uk-button uk-button-small uk-button-primary"
-                    onClick={this.addToCart}
-                    disabled={product.inventory > 0 ? '' : 'disabled'}>
-                    {label}
-                </button>
-            </div>
+            <ProductItem product={this.props.product} onAddToCartClicked={this.onAddToCartClicked} />
         );
     }
 });
 
-var ProductsList = React.createClass({
+var ProductsListContainer = React.createClass({
     mixins: [ProductsState],
 
     render: function () {
         return (
-            <div className="shop-wrap">
-                <h2 className="uk-h2">Flux Shop Demo (Marty)</h2>
-                <div>{this.renderProducts()}</div>
-            </div>
+            <ProductsList title="Flux Shop Demo (Marty)">
+                {this.renderProducts()}
+            </ProductsList>
         );
     },
 
@@ -60,11 +51,11 @@ var ProductsList = React.createClass({
             },
             done: function (products) {
                 return products.map(function (product) {
-                    return <ProductItem key={product.id} product={product} />;
+                    return <ProductItemContainer key={product.id} product={product} />;
                 });
             }
         });
     }
 });
 
-module.exports = ProductsList;
+module.exports = ProductsListContainer;

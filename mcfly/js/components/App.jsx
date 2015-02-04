@@ -1,15 +1,15 @@
 'use strict';
 
 var React = require('react');
-var Cart = require('./Cart.jsx');
-var Products = require('./Products.jsx');
+var CartContainer = require('./CartContainer.jsx');
+var ProductsContainer = require('./ProductsContainer.jsx');
 
 var App = React.createClass({
     render: function () {
         return (
             <div>
-                <Products />
-                <Cart />
+                <ProductsContainer />
+                <CartContainer />
             </div>
         );
     }

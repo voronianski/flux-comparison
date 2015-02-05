@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import Flux from './Flux'
+import Flux from './Flux';
 import App from './components/App.jsx';
 
 // On the server, we would create a new Flux instance on every request

@@ -54,33 +54,6 @@ app.get('/', (req, res) => {
     res.send(html);
   }().catch(e => res.send(e.stack));
 
-    // // Pull all the products using our WebAPIUtils
-    // // we have wrapped them up in promises but this interface can be anything
-    // // else: callbacks, generators, async/await.
-    // WebAPIUtils.getAllProducts().then((products) => {
-    //
-    //     // There are two ways we can get the data in at this point
-    //     // we can fire off the action which we're sure is a synchronous op
-    //     // or we can use alt's bootstrap which is also synchronous.
-    //     //
-    //     // We prepare the data that we want to bootstrap our stores with
-    //     // and run `alt.bootstrap`
-    //     let data = { ProductStore: { products } };
-    //     alt.bootstrap(JSON.stringify(data));
-    //
-    //     // This creates the markup that we'll use to pass into Iso
-    //     let markup = React.renderToString(React.createElement(App));
-    //
-    //     // here we use `alt.flush` in order to flush the data out of the stores
-    //     // for the next request.
-    //     let body = Iso.render(markup, alt.flush());
-    //
-    //     // and we send down the markup
-    //     res.send(`${htmlStart}${body}${htmlEnd}`);
-    // }).catch((e) => {
-    //     // Naive error handling in case something goes wrong
-    //     res.send(e.stack);
-    // });
 });
 
 app.listen(8080, () => {

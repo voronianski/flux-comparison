@@ -40,6 +40,9 @@ app.get('/', (req, res) => {
    *
    *  1. Create a new Flux instance on each request.
    *  2. Done! :)
+   *
+   *  See a more complex example with React Router here (WIP):
+   *  https://github.com/acdlite/flummox-isomorphic-demo
    */
   let flux = new Flux();
 

@@ -19,8 +19,5 @@
       "envify"
     ]
   },
-  "dependencies": {
-    "6to5-runtime": "~3.3.12",
-    "flummox": "~2.2.1"
-  }
+  "dependencies": {}
 }

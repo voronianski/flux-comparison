@@ -7,12 +7,12 @@ import CartStore from './stores/CartStore';
 
 export default class Flux extends Flummox {
 
-  constructor() {
-    super();
+    constructor() {
+        super();
 
-    this.createActions('app', Actions);
-    this.createStore('products', ProductStore, this);
-    this.createStore('cart', CartStore, this);
-  }
+        this.createActions('app', Actions);
+        this.createStore('products', ProductStore, this);
+        this.createStore('cart', CartStore, this);
+    }
 
 }

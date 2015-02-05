@@ -2,7 +2,6 @@
 
 var McFly = require('../dispatcher/McFly');
 var ProductStore = require('./ProductStore');
-var WebAPIUtils = require('../utils/WebAPIUtils');
 var assign = require('object-assign');
 
 var _products = {};

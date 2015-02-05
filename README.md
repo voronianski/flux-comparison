@@ -1,6 +1,6 @@
 # Flux Comparison by Example
 
-> Similar app implemented with different [Flux](https://facebook.github.io/flux/) solutions including Facebook's, Yahoo's and others. 
+> Similar app implemented with different [Flux](https://facebook.github.io/flux/) solutions including Facebook's, Yahoo's and others.
 
 <!-- ### [Read more](http://pixelhunter.me/) -->
 
@@ -8,7 +8,7 @@
 
 ## Usage
 
-Clone this repo and run `npm install` inside it. 
+Clone this repo and run `npm install` inside it.
 
 Before checking any of the included apps you will need to build its' Javascript resources with [Browserify](http://browserify.org/) by running `npm start` inside concrete app folder.
 
@@ -34,6 +34,7 @@ The list of Flux related implementations used in this demo.
 * [x] [Alt](https://github.com/voronianski/flux-samples/tree/master/alt)
 * [x] [Marty.js](https://github.com/voronianski/flux-samples/tree/master/marty)
 * [x] [McFly](https://github.com/voronianski/flux-samples/tree/master/mcfly)
+* [x] [Flummox](https://github.com/voronianski/flux-samples/tree/master/flummox)
 
 ### Next
 
@@ -50,6 +51,7 @@ The list of Flux related implementations used in this demo.
 - https://github.com/spoike/refluxjs
 - https://github.com/goatslacker/alt
 - https://github.com/kenwheeler/mcfly
+- https://github.com/acdlite/flummox
 - http://martyjs.org
 - http://fluxxor.com
 - http://deloreanjs.com

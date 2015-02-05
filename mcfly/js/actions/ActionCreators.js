@@ -1,7 +1,6 @@
 'use strict';
 
 var McFly = require('../dispatcher/McFly');
-var WebAPIUtils = require('../utils/WebAPIUtils');
 
 var ActionCreators = McFly.createActions({
     receiveProducts: function (products) {
@@ -17,8 +16,6 @@ var ActionCreators = McFly.createActions({
         };
     },
     cartCheckout: function (products) {
-        WebAPIUtils.checkoutProducts(products);
-
         return {
             actionType: 'CART_CHECKOUT',
             products: products

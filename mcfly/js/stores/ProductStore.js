@@ -12,7 +12,7 @@ var ProductStore = McFly.createStore({
     getAllProducts: function () {
         return _products;
     }
-}, function(payload){
+}, function (payload) {
 
     switch (payload.actionType) {
         case 'RECEIVE_PRODUCTS':

@@ -1,7 +1,6 @@
 {
   "main": "js/app.js",
   "scripts": {
-    "server": "../node_modules/6to5/bin/6to5-node --experimental server.js",
     "start": "../node_modules/watchify/bin/cmd.js . -o build/bundle.js -v -d",
     "build": "browserify js/app.js > build/bundle.js"
   },
@@ -22,7 +21,6 @@
   },
   "dependencies": {
     "6to5-runtime": "~3.3.12",
-    "express": "~4.11.2",
     "flummox": "~2.2.1"
   }
 }

@@ -16,7 +16,7 @@ let CartContainer = React.createClass({
         return {
             products: this.cartStore.getProducts(),
             total: this.cartStore.getTotal(),
-        }
+        };
     },
 
     componentDidMount() {
@@ -34,8 +34,9 @@ let CartContainer = React.createClass({
     },
 
     onCheckoutClicked() {
-        if (!this.state.products.length) return;
-
+        if (!this.state.products.length) {
+            return;
+        }
         this.actions.cartCheckout(this.state.products);
     },
 

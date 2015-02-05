@@ -1,18 +1,18 @@
 'use strict';
 
 var shop = require('../../../common/api/shop');
-var ActionCreators = require('../actions/ActionCreators');
+var APIActions = require('../actions/APIActions');
 
 var WebAPIUtils = {
     getAllProducts: function () {
         shop.getProducts(function (products) {
-            ActionCreators.receiveProducts(products);
+            APIActions.receiveProducts(products);
         });
     },
 
     checkoutProducts: function (products) {
         shop.buyProducts(products, function () {
-            ActionCreators.finishCheckout(products);
+            APIActions.finishCheckout(products);
         });
     }
 };

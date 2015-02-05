@@ -2,22 +2,10 @@
 
 var McFly = require('../dispatcher/McFly');
 
-var ActionCreators = McFly.createActions({
+var ProductActions = McFly.createActions({
     receiveProducts: function (products) {
         return {
             actionType: 'RECEIVE_PRODUCTS',
-            products: products
-        };
-    },
-    addToCart: function (product) {
-        return {
-            actionType: 'ADD_TO_CART',
-            product: product
-        };
-    },
-    cartCheckout: function (products) {
-        return {
-            actionType: 'CART_CHECKOUT',
             products: products
         };
     },
@@ -29,4 +17,4 @@ var ActionCreators = McFly.createActions({
     }
 });
 
-module.exports = ActionCreators;
+module.exports = ProductActions;

@@ -3,7 +3,7 @@
 var React = require('react');
 var Cart = require('../../../common/components/Cart.jsx');
 var CartStore = require('../stores/CartStore');
-var ActionCreators = require('../actions/ActionCreators');
+var CartActions = require('../actions/CartActions');
 
 function _getStateFromStores () {
     return {
@@ -23,7 +23,7 @@ var CartContainer = React.createClass({
         if (!this.state.products.length) {
             return;
         }
-        ActionCreators.cartCheckout(this.state.products);
+        CartActions.cartCheckout(this.state.products);
     },
 
     render: function () {

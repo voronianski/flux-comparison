@@ -4,7 +4,7 @@ var React = require('react');
 var ProductItem = require('../../../common/components/ProductItem.jsx');
 var ProductsList = require('../../../common/components/ProductsList.jsx');
 var ProductStore = require('../stores/ProductStore');
-var ActionCreators = require('../actions/ActionCreators');
+var ProductActions = require('../actions/ProductActions');
 
 function _getStateFromStores () {
     return {
@@ -14,7 +14,7 @@ function _getStateFromStores () {
 
 var ProductItemContainer = React.createClass({
     onAddToCartClicked: function () {
-        ActionCreators.addToCart(this.props.product);
+        ProductActions.addToCart(this.props.product);
     },
 
     render: function () {

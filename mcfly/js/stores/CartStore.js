@@ -3,7 +3,7 @@
 var McFly = require('../dispatcher/McFly');
 var ProductStore = require('./ProductStore');
 var assign = require('object-assign');
-var WebAPIUtils = require('../utils/WebAPIUtils');
+
 
 var _products = {};
 
@@ -37,7 +37,6 @@ var CartStore = McFly.createStore({
             CartStore.emitChange();
             break;
         case 'CART_CHECKOUT':
-            WebAPIUtils.checkoutProducts(payload.products);
             _products = {};
             CartStore.emitChange();
             break;

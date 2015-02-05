@@ -10,12 +10,12 @@ let App = React.createClass({
     let { flux } = this.props;
 
     return (
-      <div>
-        <ProductsContainer flux={flux} />
-        <CartContainer flux={flux} />
-      </div>
+        <div>
+            <ProductsContainer flux={flux} />
+            <CartContainer flux={flux} />
+        </div>
     );
-  },
+},
 
 });
 

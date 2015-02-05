@@ -5,34 +5,34 @@ import { checkoutProducts, getAllProducts } from '../utils/WebAPIUtils';
 
 export default class AppActions extends Actions {
 
-  async getAllProducts() {
-    let products = await getAllProducts();
+    async getAllProducts() {
+        let products = await getAllProducts();
 
-    this.receiveProducts(products);
-  }
+        this.receiveProducts(products);
+    }
 
-  receiveProducts(products) {
-    return products;
-  }
+    receiveProducts(products) {
+        return products;
+    }
 
-  addToCart(product) {
-    return product;
-  }
+    addToCart(product) {
+        return product;
+    }
 
-  async cartCheckout(products) {
-    this.beginCheckout();
+    async cartCheckout(products) {
+        this.beginCheckout();
 
-    let products = await checkoutProducts(products);
+        let products = await checkoutProducts(products);
 
-    this.finishCheckout(products);
-  }
+        this.finishCheckout(products);
+    }
 
-  beginCheckout() {
-    return true;
-  }
+    beginCheckout() {
+        return true;
+    }
 
-  finishCheckout(products) {
-    return products;
-  }
+    finishCheckout(products) {
+        return products;
+    }
 
 }

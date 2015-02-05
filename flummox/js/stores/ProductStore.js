@@ -17,13 +17,12 @@ export default class ProductStore extends Store {
 
     handleAddToCart(product) {
         let products = Object.assign({}, this.state.products);
-        let newProduct = Object.assign({}, product);
 
-        newProduct.inventory = newProduct.inventory > 0
-        ? newProduct.inventory - 1
-        : 0;
+        product.inventory = product.inventory > 0
+            ? product.inventory - 1
+            : 0;
 
-        products[newProduct.id] = newProduct;
+        products[product.id] = product;
         this.setState({ products });
     }
 

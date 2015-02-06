@@ -41,7 +41,6 @@ let CartContainer = React.createClass({
     },
 
     render() {
-
         return (
             <Cart
                 products={this.state.products}
@@ -49,8 +48,7 @@ let CartContainer = React.createClass({
                 onCheckoutClicked={this.onCheckoutClicked}
             />
         );
-    },
-
+    }
 });
 
 export default CartContainer;

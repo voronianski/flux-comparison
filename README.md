@@ -20,7 +20,7 @@ Select several products from _Flux Online Shop_ and add them to cart. Open brows
 
 http://labs.voronianski.com/flux-comparison
 
-**Few notes about all implementations you can read on my [blog](http://pixelhunter.me/post/110248593059/flux-solutions-compared-by-example).**
+**You may fine few notes about all implementations on my [blog](http://pixelhunter.me/post/110248593059/flux-solutions-compared-by-example).**
 
 ## Examples
 

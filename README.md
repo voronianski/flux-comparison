@@ -22,6 +22,8 @@ http://labs.voronianski.com/flux-comparison
 
 **You may fine few notes about all implementations on my [blog](http://pixelhunter.me/post/110248593059/flux-solutions-compared-by-example).**
 
+**Discussion on HackerNews - https://news.ycombinator.com/item?id=8989495.**
+
 ## Examples
 
 The list of Flux related implementations used in this demo.

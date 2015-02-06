@@ -4,7 +4,7 @@
 
 <!-- ### [Read more](http://pixelhunter.me/) -->
 
-[![](https://farm9.staticflickr.com/8643/16226391077_424b0a87dd.jpg)]()
+[![](https://farm9.staticflickr.com/8643/16226391077_424b0a87dd.jpg)](http://pixelhunter.me/post/110248593059/flux-solutions-compared-by-example)
 
 ## Usage
 
@@ -20,7 +20,7 @@ Select several products from _Flux Online Shop_ and add them to cart. Open brows
 
 http://labs.voronianski.com/flux-comparison
 
-**Detailed article about all implementations is coming soon on my blog.**
+**Few notes about all implementations you can read on my [blog](http://pixelhunter.me/post/110248593059/flux-solutions-compared-by-example).**
 
 ## Examples
 

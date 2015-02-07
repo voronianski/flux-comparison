@@ -48,8 +48,7 @@ The list of Flux related implementations used in this demo.
 ### Libraries
 
 - https://github.com/facebook/flux
-- https://github.com/yahoo/fluxible
-- https://github.com/yahoo/dispatchr
+- http://fluxible.io
 - https://github.com/spoike/refluxjs
 - https://github.com/goatslacker/alt
 - https://github.com/kenwheeler/mcfly

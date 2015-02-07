@@ -2,12 +2,12 @@
 
 var React = require('react/addons');
 var Cart = require('../../../common/components/Cart.jsx');
-var StoreMixin = require('fluxible').StoreMixin;
+var FluxibleMixin = require('fluxible').Mixin;
 var CartStore = require('../stores/CartStore');
 var cartCheckout = require('../actions/cartCheckout');
 
 var CartContainer = React.createClass({
-    mixins: [StoreMixin],
+    mixins: [FluxibleMixin],
 
     statics: {
         storeListeners: {
@@ -30,7 +30,7 @@ var CartContainer = React.createClass({
         if (!this.state.products.length) {
             return;
         }
-        this.props.context.executeAction(cartCheckout, {
+        this.executeAction(cartCheckout, {
             products: this.state.products
         });
     },

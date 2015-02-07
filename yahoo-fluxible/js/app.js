@@ -23,9 +23,11 @@ context.executeAction(receiveProducts, {}, function (err) {
         throw err;
     }
 
-    React.render(
-        React.createElement(App, {context: context.getComponentContext()}),
-        document.getElementById('fluxible-app')
-    );
+    React.withContext(context.getComponentContext(), function () {
+        React.render(
+            React.createElement(App),
+            document.getElementById('fluxible-app')
+        );
+    });
 });
 

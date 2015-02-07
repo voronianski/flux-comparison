@@ -3,13 +3,15 @@
 var React = require('react/addons');
 var ProductItem = require('../../../common/components/ProductItem.jsx');
 var ProductsList = require('../../../common/components/ProductsList.jsx');
-var StoreMixin = require('fluxible').StoreMixin;
+var FluxibleMixin = require('fluxible').Mixin;
 var ProductStore = require('../stores/ProductStore');
 var addToCart = require('../actions/addToCart');
 
 var ProductItemContainer = React.createClass({
+    mixins: [FluxibleMixin],
+
     onAddToCartClicked: function () {
-        this.props.context.executeAction(addToCart, {
+        this.executeAction(addToCart, {
             product: this.props.product
         });
     },
@@ -22,7 +24,7 @@ var ProductItemContainer = React.createClass({
 });
 
 var ProductsListContainer = React.createClass({
-    mixins: [StoreMixin],
+    mixins: [FluxibleMixin],
 
     statics: {
         storeListeners: {
@@ -41,9 +43,8 @@ var ProductsListContainer = React.createClass({
     },
 
     render: function () {
-        var context = this.props.context;
         var nodes = this.state.products.map(function (product) {
-            return <ProductItemContainer key={product.id} product={product} context={context} />;
+            return <ProductItemContainer key={product.id} product={product} />;
         });
 
         return (

@@ -43,6 +43,10 @@ The list of Flux related implementations used in this demo.
 * [ ] Fluxxor
 * [ ] Delorean.js
 
+## Examples by non-react libraries
+
+* [Riot + RiotControl] https://github.com/txchen/feplay/tree/gh-pages/riot_flux
+
 ## Resources
 
 ### Libraries

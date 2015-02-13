@@ -16,7 +16,7 @@
     "alt": "^0.10.1",
     "array.prototype.find": "^1.0.0",
     "es5-shim": "^4.0.6",
-    "flummox": "~2.2.1",
+    "flummox": "~2.6.0",
     "flux": "^2.0.1",
     "fluxible": "^0.2.0",
     "marty": "^0.8.9",

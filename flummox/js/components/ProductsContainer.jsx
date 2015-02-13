@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import FluxMixin from 'flummox/mixin'
 import ProductItem from '../../../common/components/ProductItem.jsx';
 import ProductsList from '../../../common/components/ProductsList.jsx';
 
@@ -23,32 +24,11 @@ let ProductItemContainer = React.createClass({
 
 let ProductsListContainer = React.createClass({
 
-    getInitialState() {
-        this.actions = this.props.flux.getActions('app');
-        this.productStore = this.props.flux.getStore('products');
-
-        return this.getStateFromStores();
-    },
-
-    getStateFromStores() {
-        return {
-            products: this.productStore.getProducts(),
-        };
-    },
-
-    componentDidMount() {
-        this.productStore.addListener('change', this.onStoreChange);
-    },
-
-    componentWillUnmount() {
-        this.productStore.removeListener('change', this.onStoreChange);
-    },
-
-    onStoreChange() {
-        this.setState(
-            this.getStateFromStores()
-        );
-    },
+    mixins: [FluxMixin({
+        products: store => ({
+            products: store.getProducts(),
+        })
+    })],
 
     render() {
         let nodes = this.state.products.map(product => {

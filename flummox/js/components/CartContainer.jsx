@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import FluxMixin from 'flummox/mixin'
+import FluxMixin from 'flummox/mixin';
 import Cart from '../../../common/components/Cart.jsx';
 
 let CartContainer = React.createClass({

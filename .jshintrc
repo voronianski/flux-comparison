@@ -29,7 +29,7 @@
     "latedef" : false,
     "laxbreak": false,
     "multistr": true,
-    "newcap": true,
+    "newcap": false,
     "noarg": true,
     "node" : true,
     "noempty": false,

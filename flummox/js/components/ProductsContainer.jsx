@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import FluxMixin from 'flummox/mixin';
 import ProductItem from '../../../common/components/ProductItem.jsx';

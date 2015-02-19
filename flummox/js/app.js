@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import Flux from './Flux';
 import App from './components/App.jsx';

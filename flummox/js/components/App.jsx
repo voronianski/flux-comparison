@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import CartContainer from './CartContainer.jsx';
 import ProductsContainer from './ProductsContainer.jsx';

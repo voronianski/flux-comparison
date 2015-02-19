@@ -1,5 +1,3 @@
-'use strict';
-
 import { Actions } from 'flummox';
 import { checkoutProducts, getAllProducts } from '../utils/WebAPIUtils';
 

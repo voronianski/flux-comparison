@@ -1,5 +1,3 @@
-'use strict';
-
 import { Store } from 'flummox';
 
 export default class ProductStore extends Store {

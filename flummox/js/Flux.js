@@ -1,5 +1,3 @@
-'use strict';
-
 import Flummox from 'flummox';
 import Actions from './actions/Actions';
 import ProductStore from './stores/ProductStore';

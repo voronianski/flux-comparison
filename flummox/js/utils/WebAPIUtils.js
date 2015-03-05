@@ -1,5 +1,3 @@
-'use strict';
-
 import shop from '../../../common/api/shop';
 
 export function getAllProducts() {

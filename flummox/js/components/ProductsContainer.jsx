@@ -21,7 +21,6 @@ let ProductItemContainer = React.createClass({
 });
 
 let ProductsListContainer = React.createClass({
-
     mixins: [FluxMixin({
         products: store => ({
             products: store.getProducts(),

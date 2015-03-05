@@ -43,10 +43,6 @@ The list of Flux related implementations used in this demo.
 * [ ] Fluxxor
 * [ ] Delorean.js
 
-## Examples by non-react libraries
-
-* [Riot + RiotControl](https://github.com/txchen/feplay/tree/gh-pages/riot_flux)
-
 ## Resources
 
 ### Libraries
@@ -66,6 +62,12 @@ The list of Flux related implementations used in this demo.
 - http://facebook.github.io/react/blog/2014/07/30/flux-actions-and-the-dispatcher.html
 - http://www.code-experience.com/async-requests-with-react-js-and-flux-revisited
 - http://spoike.ghost.io/deconstructing-reactjss-flux
+
+### Non React.js examples
+
+The [flux demo app](http://labs.voronianski.com/flux-comparison/) was also implemented by enthusiasts without React.js but with another view layer instead there are list of them:
+
+* [Riot + RiotControl](https://github.com/txchen/feplay/tree/gh-pages/riot_flux)
 
 ---
 

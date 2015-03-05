@@ -65,7 +65,7 @@ The list of Flux related implementations used in this demo.
 
 ### Non React.js examples
 
-The [flux demo app](http://labs.voronianski.com/flux-comparison/) was also implemented by enthusiasts without React.js but with another view layer instead:
+The [flux demo app](http://labs.voronianski.com/flux-comparison/) was also implemented by enthusiasts without React.js but with another view layer:
 
 * [Riot + RiotControl](https://github.com/txchen/feplay/tree/gh-pages/riot_flux)
 

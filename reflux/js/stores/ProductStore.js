@@ -4,20 +4,24 @@ var Reflux = require('reflux');
 var ActionCreators = require('../actions/ActionCreators');
 
 var ProductStore = Reflux.createStore({
+    listenables: ActionCreators,
+
     init: function () {
         this._products = [];
-        this.listenTo(ActionCreators.receiveProducts, this.onReceiveProducts);
-        this.listenTo(ActionCreators.addToCart, this.onAddToCart);
+    },
+
+    getInitialState: function () {
+        return this._products;
     },
 
     onReceiveProducts: function (products) {
         this._products = products;
-        this.trigger();
+        this.trigger(this._products);
     },
 
     onAddToCart: function (product) {
         product.inventory = product.inventory > 0 ? product.inventory-1 : 0;
-        this.trigger();
+        this.trigger(this._products);
     },
 
     getAllProducts: function () {

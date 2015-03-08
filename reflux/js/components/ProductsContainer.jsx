@@ -1,16 +1,11 @@
 'use strict';
 
 var React = require('react');
+var Reflux = require('reflux');
 var ProductItem = require('../../../common/components/ProductItem.jsx');
 var ProductsList = require('../../../common/components/ProductsList.jsx');
 var ProductStore = require('../stores/ProductStore');
 var ActionCreators = require('../actions/ActionCreators');
-
-function _getStateFromStores () {
-    return {
-        products: ProductStore.getAllProducts()
-    };
-}
 
 var ProductItemContainer = React.createClass({
     onAddToCartClicked: function () {
@@ -25,17 +20,9 @@ var ProductItemContainer = React.createClass({
 });
 
 var ProductsListContainer = React.createClass({
-    getInitialState: function () {
-        return _getStateFromStores();
-    },
-
-    componentDidMount: function () {
-        this.unsubscribe = ProductStore.listen(this._onChange);
-    },
-
-    componentWillUnmount: function () {
-        this.unsubscribe();
-    },
+    mixins: [
+      Reflux.connect(ProductStore, 'products'),
+    ],
 
     render: function () {
         var nodes = this.state.products.map(function (product) {
@@ -49,9 +36,6 @@ var ProductsListContainer = React.createClass({
         );
     },
 
-    _onChange: function () {
-        this.setState(_getStateFromStores());
-    }
 });
 
 module.exports = ProductsListContainer;

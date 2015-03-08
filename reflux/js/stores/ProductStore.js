@@ -5,11 +5,13 @@ var ActionCreators = require('../actions/ActionCreators');
 
 var ProductStore = Reflux.createStore({
     listenables: ActionCreators,
+
     init: function () {
-    },
-    getInitialState: function () {
         this._products = [];
-        return this._products
+    },
+
+    getInitialState: function () {
+        return this._products;
     },
 
     onReceiveProducts: function (products) {

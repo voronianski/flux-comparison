@@ -13,7 +13,7 @@ var CartContainer = React.createClass({
         return {
             products: [],
             total: '0'
-        }
+        };
     },
     onCartChange: function(products, total) {
         this.setState({

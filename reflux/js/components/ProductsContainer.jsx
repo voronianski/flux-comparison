@@ -1,12 +1,11 @@
 'use strict';
 
 var React = require('react');
-var Reflux = require('reflux')
+var Reflux = require('reflux');
 var ProductItem = require('../../../common/components/ProductItem.jsx');
 var ProductsList = require('../../../common/components/ProductsList.jsx');
 var ProductStore = require('../stores/ProductStore');
 var ActionCreators = require('../actions/ActionCreators');
-
 
 var ProductItemContainer = React.createClass({
     onAddToCartClicked: function () {

@@ -1,28 +1,25 @@
 'use strict';
 
 var React = require('react');
+var Reflux = require('reflux');
 var Cart = require('../../../common/components/Cart.jsx');
 var CartStore = require('../stores/CartStore');
 var ActionCreators = require('../actions/ActionCreators');
 
-function _getStateFromStores () {
-    return {
-        products: CartStore.getAddedProducts(),
-        total: CartStore.getTotal()
-    };
-}
-
 var CartContainer = React.createClass({
-    getInitialState: function () {
-        return _getStateFromStores();
-    },
+    mixins: [Reflux.listenTo(CartStore,"onCartChange")],
 
-    componentDidMount: function () {
-        this.unsubscribe = CartStore.listen(this._onChange);
+    getInitialState: function() {
+        return {
+            products: [],
+            total: '0'
+        }
     },
-
-    componentWillUnmount: function () {
-        this.unsubscribe();
+    onCartChange: function(products, total) {
+        this.setState({
+            products: products,
+            total: total
+        });
     },
 
     onCheckoutClicked: function () {
@@ -36,11 +33,8 @@ var CartContainer = React.createClass({
         return (
             <Cart products={this.state.products} total={this.state.total} onCheckoutClicked={this.onCheckoutClicked} />
         );
-    },
-
-    _onChange: function () {
-        this.setState(_getStateFromStores());
     }
+
 });
 
 module.exports = CartContainer;

@@ -7,16 +7,13 @@ var ProductStore = require('./ProductStore');
 var ActionCreators = require('../actions/ActionCreators');
 
 var CartStore = Reflux.createStore({
+    listenables: ActionCreators,
     init: function () {
         this._products = {};
-
-        this.listenTo(ActionCreators.cartCheckout, this.onCartCheckout);
-        this.listenTo(ActionCreators.finishCheckout, this.onSuccessCheckout);
 
         // subscribe to listen for whole ProductStore first as there is no `waitFor` in Reflux
         // (https://github.com/voronianski/flux-samples/blob/master/facebook-flux/js/stores/CartStore.js#L55)
         this.listenTo(ProductStore, noop);
-        this.listenTo(ActionCreators.addToCart, this.onAddToCart);
     },
 
     onAddToCart: function (product) {
@@ -24,15 +21,15 @@ var CartStore = Reflux.createStore({
 
         product.quantity = id in this._products ? this._products[id].quantity + 1 : 1;
         this._products[id] = assign({}, product[id], product);
-        this.trigger();
+        this.trigger(this.getAddedProducts(), this.getTotal());
     },
 
     onCartCheckout: function () {
         this._products = {};
-        this.trigger();
+        this.trigger(this.getAddedProducts(), this.getTotal());
     },
 
-    onSuccessCheckout: function (products) {
+    onFinishCheckout: function (products) {
         console.log('YOU BOUGHT:', products);
     },
 

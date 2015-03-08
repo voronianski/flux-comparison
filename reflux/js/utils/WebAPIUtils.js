@@ -3,7 +3,7 @@
 var shop = require('../../../common/api/shop');
 var ActionCreators = require('../actions/ActionCreators');
 
-module.exports = {
+var WebAPIUtils = {
     getAllProducts: function () {
         shop.getProducts(function (products) {
             ActionCreators.receiveProducts(products);
@@ -16,3 +16,9 @@ module.exports = {
         });
     }
 };
+
+ActionCreators.cartCheckout.listen(function (products) {
+    WebAPIUtils.checkoutProducts(products);
+});
+
+module.exports = WebAPIUtils;

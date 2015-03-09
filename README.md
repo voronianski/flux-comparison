@@ -40,8 +40,11 @@ The list of Flux related implementations used in this demo.
 
 ### Next
 
+* [ ] Fynx
 * [ ] Fluxxor
 * [ ] Delorean.js
+
+_You're welcome to create [issues](https://github.com/voronianski/flux-comparison/issues) with suggestions or even make your own [pull-requests](https://github.com/voronianski/flux-comparison/pulls) (but before please take a look on [contributing guidelines]())._
 
 ## Resources
 
@@ -68,6 +71,10 @@ The list of Flux related implementations used in this demo.
 The [flux demo app](http://labs.voronianski.com/flux-comparison/) was also implemented by enthusiasts without React.js but with another view layer:
 
 * [Riot + RiotControl](https://github.com/txchen/feplay/tree/gh-pages/riot_flux)
+
+## Contributing
+
+See [CONTRIBUTING.md]().
 
 ---
 

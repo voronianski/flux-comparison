@@ -36,7 +36,7 @@
     "nonew": true,
     "onevar": false,
     "plusplus": false,
-    "quotmark": "single"
+    "quotmark": "single",
     "regexp": false,
     "strict": false,
     "sub": false,

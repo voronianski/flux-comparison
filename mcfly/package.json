@@ -9,7 +9,5 @@
       "envify"
     ]
   },
-  "dependencies": {
-    "mcfly": "0.0.9"
-  }
+  "dependencies": {}
 }

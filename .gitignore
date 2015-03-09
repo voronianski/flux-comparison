@@ -3,10 +3,10 @@ node_modules
 bower_components
 *.log
 
-facebook-flux/build/bundle.js
-yahoo-fluxible/build/bundle.js
-reflux/build/bundle.js
-alt/build/bundle.js
-mcfly/build/bundle.js
-marty/build/bundle.js
-flummox/build/bundle.js
+facebook-flux/build/*.js
+yahoo-fluxible/build/*.js
+reflux/build/*.js
+alt/build/*.js
+mcfly/build/*.js
+marty/build/*.js
+flummox/build/*.js

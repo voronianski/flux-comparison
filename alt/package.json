@@ -6,8 +6,7 @@
   },
   "browserify": {
     "transform": [
-      "6to5ify",
-      "reactify",
+      "babelify",
       "envify"
     ]
   },

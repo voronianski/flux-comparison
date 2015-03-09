@@ -12,11 +12,11 @@
   "author": "Dmitri Voronianski <dmitri.voronianski@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "6to5-runtime": "~3.3.12",
-    "alt": "^0.10.1",
+    "alt": "^0.14.2",
     "array.prototype.find": "^1.0.0",
+    "babel-runtime": "^4.7.3",
     "es5-shim": "^4.0.6",
-    "flummox": "~2.6.0",
+    "flummox": "~2.13.1",
     "flux": "^2.0.1",
     "fluxible": "^0.2.0",
     "marty": "^0.8.9",
@@ -27,8 +27,8 @@
     "reflux": "^0.2.4"
   },
   "devDependencies": {
-    "6to5": "^3.3.4",
-    "6to5ify": "^4.0.0",
+    "babel": "^4.7.3",
+    "babelify": "^5.0.4",
     "browserify": "^8.0.3",
     "envify": "^3.2.0",
     "reactify": "^0.17.1",

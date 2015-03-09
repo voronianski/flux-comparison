@@ -44,7 +44,7 @@ The list of Flux related implementations used in this demo.
 * [ ] Fluxxor
 * [ ] Delorean.js
 
-_You're welcome to create [issues](https://github.com/voronianski/flux-comparison/issues) with suggestions or even make your own [pull-requests](https://github.com/voronianski/flux-comparison/pulls) (but before please take a look on [contributing guidelines]())._
+_You're welcome to create [issues](https://github.com/voronianski/flux-comparison/issues) with suggestions or even make your own [pull-requests](https://github.com/voronianski/flux-comparison/pulls) (but before please take a look on [contributing guidelines](https://github.com/voronianski/flux-comparison/blob/master/CONTRIBUTING.md))._
 
 ## Resources
 
@@ -74,7 +74,7 @@ The [flux demo app](http://labs.voronianski.com/flux-comparison/) was also imple
 
 ## Contributing
 
-See [CONTRIBUTING.md]().
+See [CONTRIBUTING.md](https://github.com/voronianski/flux-comparison/blob/master/CONTRIBUTING.md).
 
 ---
 

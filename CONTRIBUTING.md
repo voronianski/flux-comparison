@@ -8,6 +8,7 @@ You're free to choose whether you want to use latest _ECMAScript6_ features (the
 
 ##### There are not too much of rules to follow:
 
+- indent style is 4 spaces
 - always use single quotes 
 - one space after `if`, `for`, `while`, etc.
 - no spaces between `(`,`)` and statement content

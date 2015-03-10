@@ -10,3 +10,4 @@ alt/build/*.js
 mcfly/build/*.js
 marty/build/*.js
 flummox/build/*.js
+lux/build/*.js

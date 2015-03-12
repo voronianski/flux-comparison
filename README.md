@@ -2,8 +2,6 @@
 
 > Similar app implemented with different [Flux](https://facebook.github.io/flux/) solutions including Facebook's, Yahoo's and others.
 
-<!-- ### [Read more](http://pixelhunter.me/) -->
-
 [![](https://farm9.staticflickr.com/8643/16226391077_424b0a87dd.jpg)](http://pixelhunter.me/post/110248593059/flux-solutions-compared-by-example)
 
 ## Usage
@@ -34,9 +32,10 @@ The list of Flux related implementations used in this demo.
 * [x] [Fluxible by Yahoo](https://github.com/voronianski/flux-samples/tree/master/yahoo-fluxible)
 * [x] [Reflux](https://github.com/voronianski/flux-samples/tree/master/reflux)
 * [x] [Alt](https://github.com/voronianski/flux-samples/tree/master/alt)
+* [x] [Flummox](https://github.com/voronianski/flux-samples/tree/master/flummox)
 * [x] [Marty.js](https://github.com/voronianski/flux-samples/tree/master/marty)
 * [x] [McFly](https://github.com/voronianski/flux-samples/tree/master/mcfly)
-* [x] [Flummox](https://github.com/voronianski/flux-samples/tree/master/flummox)
+* [x] [Lux](https://github.com/voronianski/flux-comparison/tree/master/lux)
 
 ### Next
 
@@ -56,6 +55,7 @@ _You're welcome to create [issues](https://github.com/voronianski/flux-compariso
 - https://github.com/goatslacker/alt
 - https://github.com/kenwheeler/mcfly
 - https://github.com/acdlite/flummox
+- https://github.com/LeanKit-Labs/lux.js
 - http://martyjs.org
 - http://fluxxor.com
 - http://deloreanjs.com

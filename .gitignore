@@ -11,3 +11,4 @@ mcfly/build/*.js
 marty/build/*.js
 flummox/build/*.js
 lux/build/*.js
+material-flux/build/*.js

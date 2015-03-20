@@ -36,6 +36,7 @@ The list of Flux related implementations used in this demo.
 * [x] [Marty.js](https://github.com/voronianski/flux-samples/tree/master/marty)
 * [x] [McFly](https://github.com/voronianski/flux-samples/tree/master/mcfly)
 * [x] [Lux](https://github.com/voronianski/flux-comparison/tree/master/lux)
+* [x] [Material Flux](https://github.com/voronianski/flux-comparison/tree/master/material-flux)
 
 ### Next
 
@@ -56,6 +57,7 @@ _You're welcome to create [issues](https://github.com/voronianski/flux-compariso
 - https://github.com/kenwheeler/mcfly
 - https://github.com/acdlite/flummox
 - https://github.com/LeanKit-Labs/lux.js
+- https://github.com/azu/material-flux
 - http://martyjs.org
 - http://fluxxor.com
 - http://deloreanjs.com

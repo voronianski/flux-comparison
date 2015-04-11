@@ -2,26 +2,22 @@
 
 var Marty = require('marty');
 var Shop = require('../../../common/api/shop');
-var CartSourceActionCreators = require('../actions/cartSourceActionCreators');
-var ProductSourceActionCreators = require('../actions/productSourceActionCreators');
 
-var ShopAPI = Marty.createStateSource({
-    getAllProducts: function () {
+class ShopAPI extends Marty.HttpStateSource {
+    getAllProducts() {
         return new Promise(function (resolve) {
-            Shop.getProducts(function (products) {
-                ProductSourceActionCreators.receiveProducts(products);
-                resolve();
+            Shop.getProducts((products) => {
+                resolve(products);
             });
         });
-    },
-    checkoutProducts: function (products) {
+    }
+    checkoutProducts(products) {
         return new Promise(function (resolve) {
-            Shop.buyProducts(products, function () {
-                CartSourceActionCreators.finishCheckout(products);
+            Shop.buyProducts(products, () => {
                 resolve();
             });
         });
     }
-});
+}
 
-module.exports = ShopAPI;
+module.exports = Marty.register(ShopAPI);

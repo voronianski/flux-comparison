@@ -1,45 +1,43 @@
 'use strict';
 
 var Marty = require('marty');
-var ShopAPI = require('../sources/shopAPI');
+var ShopQueries = require('../queries/shopQueries');
 var CartConstants = require('../constants/cartConstants');
 var ProductConstants = require('../constants/productConstants');
 
-var ProductStore = Marty.createStore({
-    displayName: 'Products',
+class ProductStore extends Marty.Store {
+    constructor(options) {
+        super(options);
 
-    handlers: {
-        onAddToCart: CartConstants.ADD_TO_CART,
-        receiveProducts: ProductConstants.RECEIVE_PRODUCTS
-    },
-
-    getInitialState: function () {
-        return [];
-    },
-
-    receiveProducts: function (products) {
+        this.state = [];
+        this.handlers = {
+            onAddToCart: CartConstants.ADD_TO_CART,
+            receiveProducts: ProductConstants.RECEIVE_PRODUCTS
+        };
+    }
+    receiveProducts(products) {
         this.state = products;
         this.hasChanged();
-    },
+    }
 
-    onAddToCart: function (product) {
+    onAddToCart(product) {
         product.inventory = product.inventory > 0 ? product.inventory-1 : 0;
         this.hasChanged();
-    },
+    }
 
-    getAllProducts: function () {
+    getAllProducts() {
         return this.fetch({
             id: 'products',
-            locally: function () {
+            locally() {
                 if (this.hasAlreadyFetched('products')) {
                     return this.state;
                 }
             },
-            remotely: function () {
-                return ShopAPI.getAllProducts();
+            remotely() {
+                return ShopQueries.getAllProducts();
             }
         });
     }
-});
+}
 
-module.exports = ProductStore;
+module.exports = Marty.register(ProductStore);

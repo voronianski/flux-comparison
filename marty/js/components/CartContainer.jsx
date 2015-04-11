@@ -6,32 +6,29 @@ var Cart = require('../../../common/components/Cart.jsx');
 var CartStore = require('../stores/CartStore');
 var CartActionCreators = require('../actions/cartActionCreators');
 
-var CartState = Marty.createStateMixin({
-    listenTo: CartStore,
-
-    getState: function () {
-        return {
-            products: CartStore.getAddedProducts(),
-            total: CartStore.getTotal()
-        };
-    }
-});
-
 var CartContainer = React.createClass({
-    mixins: [CartState],
-
-    onCheckoutClicked: function () {
-        if (!this.state.products.length) {
+    onCheckoutClicked() {
+        if (!this.props.products.length) {
           return;
         }
-        CartActionCreators.cartCheckout(this.state.products);
+        CartActionCreators.cartCheckout(this.props.products);
     },
 
-    render: function () {
+    render() {
         return (
-            <Cart products={this.state.products} total={this.state.total} onCheckoutClicked={this.onCheckoutClicked} />
+            <Cart products={this.props.products} total={this.props.total} onCheckoutClicked={this.onCheckoutClicked} />
         );
     }
 });
 
-module.exports = CartContainer;
+module.exports = Marty.createContainer(CartContainer, {
+    listenTo: CartStore,
+    fetch: {
+        products() {
+            return CartStore.getAddedProducts();
+        },
+        total() {
+            return CartStore.getTotal()
+        }
+    }
+});

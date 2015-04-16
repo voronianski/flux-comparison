@@ -4,20 +4,18 @@ var Marty = require('marty');
 var ShopAPI = require('../sources/shopAPI');
 var CartConstants = require('../constants/cartConstants');
 
-var CartActionCreators = Marty.createActionCreators({
-    types: {
-        addToCart: CartConstants.ADD_TO_CART,
-        cartCheckout: CartConstants.CART_CHECKOUT
-    },
-
-    addToCart: function (product) {
-        this.dispatch(product);
-    },
-
-    cartCheckout: function (products) {
-        this.dispatch(products);
-        ShopAPI.checkoutProducts(products);
+class CartActionCreators extends Marty.ActionCreators {
+    addToCart(product) {
+        this.dispatch(CartConstants.ADD_TO_CART, product);
     }
-});
 
-module.exports = CartActionCreators;
+    cartCheckout(products) {
+        this.dispatch(CartConstants.CART_CHECKOUT, products);
+
+        ShopAPI.checkoutProducts(products)
+            .then(() => this.dispatch(CartConstants.SUCCESS_CHECKOUT, products))
+            .catch(error => this.dispatch(CartConstants.CHECKOUT_FAILED, error));
+    }
+}
+
+module.exports = Marty.register(CartActionCreators);

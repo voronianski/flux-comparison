@@ -13,7 +13,7 @@ export default class CartStore extends Store {
         this.register(actionIds.finishCheckout, this.handleFinishCheckout);
 
         this.state = {
-            products: {},
+            products: {}
         };
     }
 
@@ -30,7 +30,7 @@ export default class CartStore extends Store {
         this.setState({ products });
     }
 
-    handleBeginCheckout(products) {
+    handleBeginCheckout() {
         this.setState({ products: {} });
     }
 

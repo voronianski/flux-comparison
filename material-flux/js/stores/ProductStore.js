@@ -2,7 +2,6 @@ import { Store } from 'material-flux';
 import { keys } from '../actions/Actions';
 
 export default class ProductStore extends Store {
-
     constructor(context) {
         super(context);
 

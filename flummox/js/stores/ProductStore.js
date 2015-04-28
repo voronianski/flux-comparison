@@ -9,7 +9,7 @@ export default class ProductStore extends Store {
         this.register(actionIds.receiveProducts, this.handleReceiveProducts);
 
         this.state = {
-            products: {},
+            products: {}
         };
     }
 

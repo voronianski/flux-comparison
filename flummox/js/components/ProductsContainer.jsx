@@ -4,7 +4,6 @@ import ProductItem from '../../../common/components/ProductItem.jsx';
 import ProductsList from '../../../common/components/ProductsList.jsx';
 
 let ProductItemContainer = React.createClass({
-
     onAddToCartClicked() {
         this.props.flux.getActions('app').addToCart(this.props.product);
     },
@@ -16,14 +15,14 @@ let ProductItemContainer = React.createClass({
                 onAddToCartClicked={this.onAddToCartClicked}
             />
         );
-    },
+    }
 
 });
 
 let ProductsListContainer = React.createClass({
     mixins: [FluxMixin({
         products: store => ({
-            products: store.getProducts(),
+            products: store.getProducts()
         })
     })],
 
@@ -43,8 +42,7 @@ let ProductsListContainer = React.createClass({
                 {nodes}
             </ProductsList>
         );
-    },
-
+    }
 });
 
 export default ProductsListContainer;

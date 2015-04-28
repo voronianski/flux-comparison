@@ -3,7 +3,6 @@ import FluxMixin from 'flummox/mixin';
 import Cart from '../../../common/components/Cart.jsx';
 
 let CartContainer = React.createClass({
-
     mixins: [FluxMixin({
         cart: store => ({
             products: store.getProducts(),

@@ -2,7 +2,6 @@ import { Store } from 'material-flux';
 import { keys } from '../actions/Actions';
 
 export default class CartStore extends Store {
-
     constructor(context) {
         super(context);
         this.context = context;
@@ -28,7 +27,7 @@ export default class CartStore extends Store {
         this.setState({ products });
     }
 
-    handleBeginCheckout(products) {
+    handleBeginCheckout() {
         this.setState({ products: {} });
     }
 

@@ -4,7 +4,6 @@ import ProductStore from './stores/ProductStore';
 import CartStore from './stores/CartStore';
 
 export default class Flux extends Flummox {
-
     constructor() {
         super();
 

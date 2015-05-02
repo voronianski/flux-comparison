@@ -73,6 +73,7 @@ _You're welcome to create [issues](https://github.com/voronianski/flux-compariso
 The [flux demo app](http://labs.voronianski.com/flux-comparison/) was also implemented by enthusiasts without React.js but with another view layer:
 
 * [Riot + RiotControl](https://github.com/txchen/feplay/tree/gh-pages/riot_flux)
+* [flux-riot demo](https://github.com/mingliangfeng/flux-riot-demo)
 
 ## Contributing
 

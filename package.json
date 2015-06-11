@@ -19,6 +19,7 @@
     "flummox": "~2.13.1",
     "flux": "^2.0.3",
     "fluxible": "^0.3.0",
+    "lux.js": "^0.7.1",
     "marty": "^0.9.0",
     "material-flux": "^1.1.1",
     "mcfly": "0.0.9",

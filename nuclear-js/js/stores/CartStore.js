@@ -35,7 +35,7 @@ function addToCart(state, { product }) {
 }
 
 function beginCheckout(state) {
-    var currentItems = state.get('productQuantities')
+    const currentItems = state.get('productQuantities')
 
     return state
         .set('productQuantities', toImmutable({}))

@@ -21,9 +21,10 @@ const cartProducts = [
 const cartTotal = [
     cartProducts,
     (items) => {
-        return items.reduce((total, item) => {
+        const total = items.reduce((total, item) => {
             return total + (item.quantity * item.price)
         }, 0) || 0
+        return total.toFixed(2)
     }
 ]
 

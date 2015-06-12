@@ -11,11 +11,11 @@ import actions from '../actions'
 
 
 const ProductItemContainer = React.createClass({
-    onAddToCartClicked: function () {
+    onAddToCartClicked() {
         actions.addToCart(this.props.product);
     },
 
-    render: function () {
+    render() {
         return (
             <ProductItem product={this.props.product} onAddToCartClicked={this.onAddToCartClicked} />
         );

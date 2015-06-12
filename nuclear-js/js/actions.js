@@ -1,32 +1,38 @@
-import actionTypes from './action-types'
+import shop from '../../common/api/shop'
 import reactor from './reactor'
 import getters from './getters'
-import shop from '../../common/api/shop'
+import {
+    RECEIVE_PRODUCTS,
+    ADD_TO_CART,
+    CHECKOUT_START,
+    CHECKOUT_SUCCESS,
+    CHECKOUT_FAILED,
+} from './action-types'
 
 export default {
     fetchProducts() {
         shop.getProducts(products => {
-            reactor.dispatch(actionTypes.RECEIVE_PRODUCTS, { products })
+            reactor.dispatch(RECEIVE_PRODUCTS, { products })
         });
     },
 
     addToCart(product) {
-        reactor.dispatch(actionTypes.ADD_TO_CART, { product })
+        reactor.dispatch(ADD_TO_CART, { product })
     },
 
     cartCheckout() {
         const productsInCart = reactor.evaluateToJS(getters.cartProducts)
 
-        reactor.dispatch(actionTypes.CHECKOUT_START)
+        reactor.dispatch(CHECKOUT_START)
 
         shop.buyProducts(productsInCart, () => {
             console.log("YOU BOUGHT: ", productsInCart)
 
-            reactor.dispatch(actionTypes.CHECKOUT_SUCCESS)
+            reactor.dispatch(CHECKOUT_SUCCESS)
 
             // uncomment out to see a rollback when a checkout fails
             //setTimeout(() => {
-                //reactor.dispatch(actionTypes.CHECKOUT_FAILED)
+                //reactor.dispatch(CHECKOUT_FAILED)
             //}, 1000)
         });
     },

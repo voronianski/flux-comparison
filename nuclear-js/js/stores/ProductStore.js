@@ -21,8 +21,8 @@ function receiveProducts(state, { products }) {
 
 function decrementInventory(state, { product }) {
     return state.update(product.id, product => {
-        var currentInventory = product.get('inventory')
-        var newInventory = (currentInventory > 0) ? currentInventory - 1 : 0;
+        const currentInventory = product.get('inventory')
+        const newInventory = (currentInventory > 0) ? currentInventory - 1 : 0;
         return product.set('inventory', newInventory)
     })
 }

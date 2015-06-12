@@ -1,11 +1,11 @@
 'use strict';
 
-var React = require('react');
-var CartContainer = require('./CartContainer.jsx');
-var ProductsContainer = require('./ProductsContainer.jsx');
+import React from 'react'
+import CartContainer from './CartContainer.jsx'
+import ProductsContainer from './ProductsContainer.jsx'
 
-var App = React.createClass({
-    render: function () {
+export default React.createClass({
+    render() {
         return (
             <div>
                 <ProductsContainer />
@@ -14,5 +14,3 @@ var App = React.createClass({
         );
     }
 });
-
-module.exports = App;

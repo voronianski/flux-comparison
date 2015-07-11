@@ -20,7 +20,7 @@ export default class AppActions extends Actions {
     async cartCheckout(products) {
         this.beginCheckout();
 
-        let products = await checkoutProducts(products);
+        products = await checkoutProducts(products);
 
         this.finishCheckout(products);
     }

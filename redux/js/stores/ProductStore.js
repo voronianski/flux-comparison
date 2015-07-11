@@ -6,20 +6,22 @@ function _decreaseInventory (product) {
 }
 
 export default function handle(state = {}, action) {
+    let newState = Object.assign({}, state);
+
     switch (action.type) {
         case RECEIVE_PRODUCTS:
             {
                 for (let product of action.products) {
-                    state[product.id] = product;
+                    newState[product.id] = product;
                 }
 
-                return Object.assign({}, state);
+                return newState;
             }
         case ADD_TO_CART:
             {
-                _decreaseInventory(state[action.product.id]);
+                _decreaseInventory(newState[action.product.id]);
 
-                return Object.assign({}, state);
+                return newState;
             }
         default:
             return state;

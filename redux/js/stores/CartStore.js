@@ -17,16 +17,20 @@ export function getTotal(state) {
 
 // can be improve with ImmutableJS
 export default function handle(state = {}, action) {
+    let newState = Object.assign({}, state);
+
     switch (action.type) {
         case ADD_TO_CART:
             // https://github.com/gaearon/redux#what-about-waitfor
             // AppDispatcher.waitFor([ProductStore.dispatchToken]);
 
-            _addToCart(state, action.product);
+            _addToCart(newState, action.product);
 
-            return Object.assign({}, state);
+            return newState;
         case BEGIN_CHECKOUT:
-            return Object.assign({}, {});
+            newState = {};
+
+            return newState;
         default:
             return state;
     }

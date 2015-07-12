@@ -6,12 +6,11 @@ import * as ActionCreators from './actions/ActionCreators';
 import App from './components/App.jsx';
 
 const redux = createRedux(stores);
-
 redux.dispatch(ActionCreators.getAllProducts());
 
 React.render(
     <Provider redux={redux}>
         {() => <App />}
     </Provider>,
-    document.getElementById('flux-app')
+    document.getElementById('redux-app')
 );

@@ -1,15 +1,15 @@
 import { ADD_TO_CART, BEGIN_CHECKOUT, SUCCESS_CHECKOUT } from '../constants/ActionTypes';
 
 function _addToCart (state, product) {
-    var id = product.id;
+    let id = product.id;
     product.quantity = id in state ? state[id].quantity + 1 : 1;
     state[id] = Object.assign({}, product[id], product);
 }
 
 export function getTotal(state) {
-    var total = 0;
-    for (var id in state) {
-        var product = state[id];
+    let total = 0;
+    for (let id in state) {
+        let product = state[id];
         total += product.price * product.quantity;
     }
     return total.toFixed(2);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; // eslint-disable-line no-unused-vars
 import { connect } from 'redux/react';
 import { bindActionCreators } from 'redux';
 import { addToCart } from '../actions/ActionCreators';
@@ -13,12 +13,13 @@ class ProductItemContainer {
 
     render() {
         const { product, dispatch } = this.props;
+
         return (
             <ProductItem
                 product={product}
                 {...bindActionCreators({
-                    // todo: there must be a nicer way than .bind
-                    onAddToCartClicked: this.onAddToCartClicked.bind(this)
+                    // es7 bind syntax (https://github.com/zenparsing/es-function-bind)
+                    onAddToCartClicked: ::this.onAddToCartClicked
                 }, dispatch)}
             />
         );
@@ -33,8 +34,8 @@ export default class ProductsListContainer {
     render() {
         const { products } = this.props;
 
-        let nodes = Object.keys(products).map(id => {
-            let product = products[id];
+        const nodes = Object.keys(products).map(id => {
+            const product = products[id];
             return (
                 <ProductItemContainer
                     key={product.id}
@@ -49,4 +50,4 @@ export default class ProductsListContainer {
             </ProductsList>
         );
     }
-};
+}

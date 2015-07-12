@@ -1,8 +1,7 @@
 import { RECEIVE_PRODUCTS, ADD_TO_CART } from '../constants/ActionTypes';
-import ShopAPI from '../../../common/api/shop';
 
 function _decreaseInventory (product) {
-    product.inventory = product.inventory > 0 ? product.inventory-1 : 0;
+    product.inventory = product.inventory > 0 ? product.inventory - 1 : 0;
 }
 
 export default function handle(state = {}, action) {
@@ -10,19 +9,15 @@ export default function handle(state = {}, action) {
 
     switch (action.type) {
         case RECEIVE_PRODUCTS:
-            {
-                for (let product of action.products) {
-                    newState[product.id] = product;
-                }
-
-                return newState;
+            for (let product of action.products) {
+                newState[product.id] = product;
             }
+            return newState;
+
         case ADD_TO_CART:
-            {
-                _decreaseInventory(newState[action.product.id]);
+            _decreaseInventory(newState[action.product.id]);
+            return newState;
 
-                return newState;
-            }
         default:
             return state;
     }

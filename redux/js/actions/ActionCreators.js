@@ -11,21 +11,21 @@ export function getAllProducts() {
             dispatch(receiveProducts(products));
         });
     };
-};
+}
 
 export function receiveProducts(products) {
     return {
         type: ActionTypes.RECEIVE_PRODUCTS,
         products: products
     };
-};
+}
 
 export function addToCart(product) {
     return {
         type: ActionTypes.ADD_TO_CART,
         product: product
     };
-};
+}
 
 export function beginCheckout(products) {
     return (dispatch, getState) => {
@@ -37,11 +37,11 @@ export function beginCheckout(products) {
             dispatch(finishCheckout(products));
         });
     };
-};
+}
 
 export function finishCheckout(products) {
     return {
         type: ActionTypes.SUCCESS_CHECKOUT,
         products: products
     };
-};
+}

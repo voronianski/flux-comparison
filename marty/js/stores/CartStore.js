@@ -21,7 +21,7 @@ class CartStore extends Marty.Store {
 
         var id = product.id;
         product.quantity = id in this.state ? this.state[id].quantity + 1 : 1;
-        this.state[id] = assign({}, product[id], product);
+        this.state[id] = assign({}, product);
         this.hasChanged();
     }
 

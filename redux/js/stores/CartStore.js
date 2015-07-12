@@ -1,7 +1,7 @@
 import { ADD_TO_CART, BEGIN_CHECKOUT, SUCCESS_CHECKOUT } from '../constants/ActionTypes';
 
 function _addToCart (state, product) {
-    let cartProduct = Object.assign({}, product[id], product);
+    let cartProduct = Object.assign({}, product);
     let { id } = cartProduct;
 
     cartProduct.quantity = id in state ? state[id].quantity + 1 : 1;

@@ -15,7 +15,7 @@ var _products = {};
 function _addToCart (product) {
     var id = product.id;
     product.quantity = id in _products ? _products[id].quantity + 1 : 1;
-    _products[id] = assign({}, product[id], product);
+    _products[id] = assign({}, product);
 }
 
 var CartStore = assign({}, EventEmitter.prototype, {

@@ -1,9 +1,13 @@
 import { ADD_TO_CART, BEGIN_CHECKOUT, SUCCESS_CHECKOUT } from '../constants/ActionTypes';
 
 function _addToCart (state, product) {
-    let id = product.id;
-    product.quantity = id in state ? state[id].quantity + 1 : 1;
-    state[id] = Object.assign({}, product[id], product);
+    let cartProduct = Object.assign({}, product[id], product);
+    let { id } = cartProduct;
+
+    cartProduct.quantity = id in state ? state[id].quantity + 1 : 1;
+    delete cartProduct.inventory;
+
+    state[id] = cartProduct;
 }
 
 export function getTotal(state) {

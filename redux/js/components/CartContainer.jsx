@@ -7,13 +7,7 @@ import Cart from '../../../common/components/Cart.jsx';
 
 @connect(state => {
     return {
-        products: Object.keys(state.cart).map(key => {
-            let product = state.cart[key];
-
-            // inventory shouldnt be known in cart
-            delete product.inventory;
-            return product;
-        }),
+        products: Object.keys(state.cart).map(key => state.cart[key]),
         total: getTotal(state.cart)
     };
 })

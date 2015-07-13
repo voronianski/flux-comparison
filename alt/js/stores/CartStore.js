@@ -16,7 +16,7 @@ class CartStore {
         this.waitFor(ProductStore.dispatchToken);
         var id = product.id;
         product.quantity = id in this.products ? this.products[id].quantity + 1 : 1;
-        this.products[id] = assign({}, product[id], product);
+        this.products[id] = assign({}, product);
     }
 
     onCartCheckout() {

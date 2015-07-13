@@ -20,7 +20,7 @@ var CartStore = Reflux.createStore({
         var id = product.id;
 
         product.quantity = id in this._products ? this._products[id].quantity + 1 : 1;
-        this._products[id] = assign({}, product[id], product);
+        this._products[id] = assign({}, product);
         this.trigger(this.getAddedProducts(), this.getTotal());
     },
 

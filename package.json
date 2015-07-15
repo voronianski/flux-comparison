@@ -27,7 +27,7 @@
     "object-assign": "^2.0.0",
     "react": "^0.13.0",
     "react-router": "^0.13.0",
-    "nuclear-js": "^1.0.5"
+    "nuclear-js": "^1.0.5",
     "redux": "^0.12.0",
     "reflux": "^0.2.4"
   },

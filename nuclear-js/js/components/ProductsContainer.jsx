@@ -1,13 +1,13 @@
 'use strict';
 
-import React from 'react'
+import React from 'react';
 
-import ProductItem from '../../../common/components/ProductItem.jsx'
-import ProductsList from '../../../common/components/ProductsList.jsx'
+import ProductItem from '../../../common/components/ProductItem.jsx';
+import ProductsList from '../../../common/components/ProductsList.jsx';
 
-import reactor from '../reactor'
-import getters from '../getters'
-import actions from '../actions'
+import reactor from '../reactor';
+import getters from '../getters';
+import actions from '../actions';
 
 
 const ProductItemContainer = React.createClass({

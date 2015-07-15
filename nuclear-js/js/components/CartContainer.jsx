@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Cart from '../../../common/components/Cart.jsx'
-import reactor from '../reactor'
-import getters from '../getters'
-import actions from '../actions'
+import Cart from '../../../common/components/Cart.jsx';
+import reactor from '../reactor';
+import getters from '../getters';
+import actions from '../actions';
 
 export default React.createClass({
     mixins: [reactor.ReactMixin],
@@ -19,7 +19,7 @@ export default React.createClass({
         if (!this.state.products.length) {
             return;
         }
-        actions.cartCheckout()
+        actions.cartCheckout();
     },
 
     render: function () {

@@ -1,8 +1,8 @@
 'use strict';
 
-import React from 'react'
-import CartContainer from './CartContainer.jsx'
-import ProductsContainer from './ProductsContainer.jsx'
+import React from 'react';
+import CartContainer from './CartContainer.jsx';
+import ProductsContainer from './ProductsContainer.jsx';
 
 export default React.createClass({
     render() {
@@ -12,5 +12,5 @@ export default React.createClass({
                 <CartContainer />
             </div>
         );
-    }
+    },
 });

@@ -1,12 +1,12 @@
-import { Reactor } from 'nuclear-js'
-import CartStore from './stores/CartStore'
-import ProductStore from './stores/ProductStore'
+import { Reactor } from 'nuclear-js';
+import CartStore from './stores/CartStore';
+import ProductStore from './stores/ProductStore';
 
-const reactor = new Reactor({ debug: true })
+const reactor = new Reactor({ debug: true });
 
 reactor.registerStores({
   cart: CartStore,
-  products: ProductStore,
-})
+  products: ProductStore
+});
 
-export default reactor
+export default reactor;

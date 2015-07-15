@@ -37,12 +37,9 @@ The list of Flux related implementations used in this demo.
 * [x] [McFly](https://github.com/voronianski/flux-samples/tree/master/mcfly)
 * [x] [Lux](https://github.com/voronianski/flux-comparison/tree/master/lux)
 * [x] [Material Flux](https://github.com/voronianski/flux-comparison/tree/master/material-flux)
+* [x] [Redux](https://github.com/voronianski/flux-comparison/tree/master/redux)
 
 ### Next
-
-* [ ] Fynx
-* [ ] Fluxxor
-* [ ] Delorean.js
 
 _You're welcome to create [issues](https://github.com/voronianski/flux-comparison/issues) with suggestions or even make your own [pull-requests](https://github.com/voronianski/flux-comparison/pulls) (but before please take a look on [contributing guidelines](https://github.com/voronianski/flux-comparison/blob/master/CONTRIBUTING.md))._
 
@@ -59,14 +56,14 @@ _You're welcome to create [issues](https://github.com/voronianski/flux-compariso
 - https://github.com/LeanKit-Labs/lux.js
 - https://github.com/azu/material-flux
 - http://martyjs.org
-- http://fluxxor.com
-- http://deloreanjs.com
+- https://github.com/gaearon/redux
 
 ### Articles
 
 - http://facebook.github.io/react/blog/2014/07/30/flux-actions-and-the-dispatcher.html
 - http://www.code-experience.com/async-requests-with-react-js-and-flux-revisited
 - http://spoike.ghost.io/deconstructing-reactjss-flux
+- https://medium.com/@dan_abramov/the-evolution-of-flux-frameworks-6c16ad26bb31
 
 ### Non React.js examples
 

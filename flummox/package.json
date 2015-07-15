@@ -9,7 +9,7 @@
       [
         "babelify",
         {
-          "experimental": true,
+          "stage": 0,
           "optional": [
             "runtime"
           ]

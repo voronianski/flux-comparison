@@ -12,3 +12,5 @@ marty/build/*.js
 flummox/build/*.js
 lux/build/*.js
 material-flux/build/*.js
+nuclear-js/build/*.js
+redux/build/*.js

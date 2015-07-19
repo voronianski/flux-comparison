@@ -38,6 +38,7 @@ The list of Flux related implementations used in this demo.
 * [x] [Lux](https://github.com/voronianski/flux-comparison/tree/master/lux)
 * [x] [Material Flux](https://github.com/voronianski/flux-comparison/tree/master/material-flux)
 * [x] [Redux](https://github.com/voronianski/flux-comparison/tree/master/redux)
+* [x] [Nuclear.js](https://github.com/voronianski/flux-comparison/tree/master/nuclear-js)
 
 ### Next
 
@@ -57,6 +58,7 @@ _You're welcome to create [issues](https://github.com/voronianski/flux-compariso
 - https://github.com/azu/material-flux
 - http://martyjs.org
 - https://github.com/gaearon/redux
+- https://optimizely.github.io/nuclear-js
 
 ### Articles
 

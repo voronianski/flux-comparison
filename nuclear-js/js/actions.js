@@ -5,8 +5,8 @@ import {
     RECEIVE_PRODUCTS,
     ADD_TO_CART,
     CHECKOUT_START,
-    CHECKOUT_SUCCESS,
-    CHECKOUT_FAILED,
+    CHECKOUT_SUCCESS
+    // CHECKOUT_FAILED
 } from './action-types';
 
 export default {

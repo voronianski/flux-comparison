@@ -5,8 +5,8 @@ import ProductStore from './stores/ProductStore';
 const reactor = new Reactor({ debug: true });
 
 reactor.registerStores({
-  cart: CartStore,
-  products: ProductStore
+    cart: CartStore,
+    products: ProductStore
 });
 
 export default reactor;

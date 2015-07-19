@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 
 import ProductItem from '../../../common/components/ProductItem.jsx';
@@ -27,17 +25,19 @@ export default React.createClass({
 
     getDataBindings() {
         return {
-            products: getters.products,
-        }
+            products: getters.products
+        };
     },
 
     render: function () {
         return (
             <ProductsList title="Flux Shop Demo (NuclearJS)">
                 {this.state.products.map(product => {
-                    return <ProductItemContainer key={product.id} product={product} />;
+                    return (
+                        <ProductItemContainer key={product.id} product={product} />
+                    );
                 })}
             </ProductsList>
         );
-    },
+    }
 });

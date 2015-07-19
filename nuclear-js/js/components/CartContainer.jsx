@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import Cart from '../../../common/components/Cart.jsx';
 import reactor from '../reactor';
@@ -11,8 +11,8 @@ export default React.createClass({
     getDataBindings() {
         return {
             products: getters.cartProducts,
-            total: getters.cartTotal,
-        }
+            total: getters.cartTotal
+        };
     },
 
     onCheckoutClicked: function () {
@@ -26,5 +26,5 @@ export default React.createClass({
         return (
             <Cart products={this.state.products} total={this.state.total} onCheckoutClicked={this.onCheckoutClicked} />
         );
-    },
+    }
 });

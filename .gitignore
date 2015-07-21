@@ -14,3 +14,4 @@ lux/build/*.js
 material-flux/build/*.js
 nuclear-js/build/*.js
 redux/build/*.js
+fluxette/build/*.js

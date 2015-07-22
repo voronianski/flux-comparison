@@ -6,7 +6,7 @@
   },
   "browserify": {
     "transform": [
-      ["babelify", { "stage": 0 }],
+      "babelify",
       "envify"
     ]
   },

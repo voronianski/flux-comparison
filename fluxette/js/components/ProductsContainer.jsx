@@ -1,53 +1,25 @@
-import React from 'react'; // eslint-disable-line no-unused-vars
-import { connect } from 'redux/react';
-import { bindActionCreators } from 'redux';
-import { addToCart } from '../actions/ActionCreators';
+import React from 'react';
+import { dispatch, connect } from '../flux';
+import { cart } from '../flux/creators';
 import ProductItem from '../../../common/components/ProductItem.jsx';
 import ProductsList from '../../../common/components/ProductsList.jsx';
 
-@connect(() => ({}))
-class ProductItemContainer {
+class ProductItemContainer extends React.Component {
     onAddToCartClicked() {
-        return addToCart(this.props.product);
+        dispatch(cart.add(this.props.product));
     }
-
     render() {
-        const { product, dispatch } = this.props;
-
-        return (
-            <ProductItem
-                product={product}
-                {...bindActionCreators({
-                    // es7 bind syntax (https://github.com/zenparsing/es-function-bind)
-                    onAddToCartClicked: ::this.onAddToCartClicked
-                }, dispatch)}
-            />
-        );
+        return <ProductItem product={ this.props.product } onAddToCartClicked={ ::this.onAddToCartClicked } />;
     }
 }
 
-@connect(state => ({
-    // named in stores/index.js
-    products: state.products
-}))
-export default class ProductsListContainer {
+@connect(state => state.products, 'products')
+export default class extends React.Component {
     render() {
-        const { products } = this.props;
-
-        const nodes = Object.keys(products).map(id => {
-            const product = products[id];
-            return (
-                <ProductItemContainer
-                    key={product.id}
-                    product={product}
-                />
-            );
-        });
-
-        return (
-            <ProductsList title="Flux Shop Demo (Redux)">
-                {nodes}
-            </ProductsList>
-        );
+        let { products } = this.state;
+        products = Object.keys(products).map(key => products[key]);
+        let productNodes = products.map(product =>
+            <ProductItemContainer key={ product.id } product={ product } />);
+        return <ProductsList title="Flux Shop Demo (Fluxette)">{ productNodes }</ProductsList>;
     }
 }

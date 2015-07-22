@@ -1,16 +1,17 @@
 import React from 'react';
-import { createRedux } from 'redux';
-import { Provider } from 'redux/react';
-import * as stores from './stores/index';
-import * as ActionCreators from './actions/ActionCreators';
 import App from './components/App.jsx';
+import { Mapware } from 'fluxette';
+import { hook } from './flux';
+import { API } from './flux/types';
+import { getProducts } from './flux/async';
 
-const redux = createRedux(stores);
-redux.dispatch(ActionCreators.getAllProducts());
+hook(Mapware({
+	[API.CHECKOUT.DONE]: action => {
+		let { products } = action;
+		console.log('YOU BOUGHT:', Object.keys(products).map(key => products[key]));
+	}
+}));
 
-React.render(
-    <Provider redux={redux}>
-        {() => <App />}
-    </Provider>,
-    document.getElementById('redux-app')
-);
+getProducts();
+
+React.render(<App />, document.getElementById('app'));

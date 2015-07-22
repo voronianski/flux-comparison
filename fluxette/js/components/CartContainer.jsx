@@ -1,32 +1,14 @@
-import React from 'react'; // eslint-disable-line no-unused-vars
-import { connect } from 'redux/react';
-import { bindActionCreators } from 'redux';
-import { beginCheckout } from '../actions/ActionCreators';
-import { getTotal } from '../stores/CartStore';
+import React from 'react';
+import { connect } from '../flux';
+import { buyProducts } from '../flux/async';
 import Cart from '../../../common/components/Cart.jsx';
 
-@connect(state => {
-    return {
-        products: Object.keys(state.cart).map(key => state.cart[key]),
-        total: getTotal(state.cart)
-    };
-})
-export default class CartContainer {
-    onCheckoutClicked() {
-        return beginCheckout(this.props.products);
-    }
-
+@connect(state => state.cart, 'cart')
+export default class extends React.Component {
     render() {
-        const { products, total, dispatch } = this.props;
-        return (
-            <Cart
-                products={products}
-                total={total}
-                {...bindActionCreators({
-                    // es7 bind syntax (https://github.com/zenparsing/es-function-bind)
-                    onCheckoutClicked: ::this.onCheckoutClicked
-                }, dispatch)}
-            />
-        );
+        let { cart } = this.state;
+        cart = Object.keys(cart).map(key => cart[key]);
+        let total = cart.reduce((sum, product) => sum + product.price * product.quantity, 0).toFixed(2);
+        return <Cart products={ cart } total={ total } onCheckoutClicked={ buyProducts } />;
     }
 }

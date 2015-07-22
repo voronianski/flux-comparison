@@ -10,6 +10,7 @@
   ],
   "rules": {
     "strict": 0,
+    "indent": [2, 4],
     "quotes": [2, "single"],
     "no-underscore-dangle": 0,
     "no-unused-vars": 1,

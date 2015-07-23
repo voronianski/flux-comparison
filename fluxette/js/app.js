@@ -6,10 +6,10 @@ import { API } from './flux/types';
 import { getProducts } from './flux/async';
 
 hook(Mapware({
-	[API.CHECKOUT.DONE]: action => {
-		let { products } = action;
-		console.log('YOU BOUGHT:', Object.keys(products).map(key => products[key]));
-	}
+    [API.CHECKOUT.DONE]: action => {
+        let { products } = action;
+        console.log('YOU BOUGHT:', Object.keys(products).map(key => products[key]));
+    }
 }));
 
 getProducts();

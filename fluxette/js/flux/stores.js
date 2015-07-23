@@ -1,21 +1,30 @@
 import { Store } from 'fluxette';
 import { CART, API } from './types';
-import { splicefilter } from '../util';
 
 let products = Store([], {
     [API.PRODUCTS.DONE]: (products, action) => action.products,
     [CART.ADD]: (products, action) => {
         let { id } = action.product;
-        let [left, product, right] = splicefilter(products, p => p.id === id);
-        return [...left, { ...product, inventory: product.inventory - 1 }, ...right];
+        let i, product;
+        for (i = 0; i < products.length; i++) {
+            if (products[i].id === id) {
+                product = products[i];
+                break;
+            }
+        }
+        return [
+            ...products.slice(0, i),
+            { ...product, inventory: product.inventory - 1 },
+            ...products.slice(i + 1)
+        ];
     }
 });
 
 let cart = Store({}, {
     [CART.ADD]: (cart, action) => {
         let { product } = action;
-        product = cart[product.id] || product;
-        return { ...cart, [product.id]: { ...product, quantity: (product.quantity || 0) + 1 } };
+        let { inventory, ...p } = cart[product.id] || product;
+        return { ...cart, [p.id]: { ...p, quantity: (p.quantity || 0) + 1 } };
     },
     [API.CHECKOUT.REQUEST]: cart => ({})
 });

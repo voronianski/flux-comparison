@@ -13,12 +13,13 @@ class ProductItemContainer extends React.Component {
     }
 }
 
-@connect(state => state.products, 'products')
+@connect(state => {
+    let { products } = state;
+    return Object.keys(products).map(key => products[key]);
+}, 'products')
 export default class extends React.Component {
     render() {
-        let { products } = this.state;
-        products = Object.keys(products).map(key => products[key]);
-        let productNodes = products.map(product =>
+        let productNodes = this.state.products.map(product =>
             <ProductItemContainer key={ product.id } product={ product } />);
         return <ProductsList title="Flux Shop Demo (Fluxette)">{ productNodes }</ProductsList>;
     }

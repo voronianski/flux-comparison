@@ -1,10 +1,9 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { connect } from 'redux/react';
+import { connect } from 'react-redux';
 import ProductsContainer from './ProductsContainer.jsx';
 import CartContainer from './CartContainer.jsx';
 
-@connect(() => ({}))
-export default class App {
+class App {
     render() {
         return (
             <div>
@@ -14,3 +13,5 @@ export default class App {
         );
     }
 }
+
+export default connect(() => ({}))(App);

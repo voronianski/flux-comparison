@@ -1,11 +1,10 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { connect } from 'redux/react';
+import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { addToCart } from '../actions/ActionCreators';
 import ProductItem from '../../../common/components/ProductItem.jsx';
 import ProductsList from '../../../common/components/ProductsList.jsx';
 
-@connect(() => ({}))
 class ProductItemContainer {
     onAddToCartClicked() {
         return addToCart(this.props.product);
@@ -18,26 +17,23 @@ class ProductItemContainer {
             <ProductItem
                 product={product}
                 {...bindActionCreators({
-                    // es7 bind syntax (https://github.com/zenparsing/es-function-bind)
-                    onAddToCartClicked: ::this.onAddToCartClicked
+                    onAddToCartClicked: this.onAddToCartClicked.bind(this)
                 }, dispatch)}
             />
         );
     }
 }
 
-@connect(state => ({
-    // named in stores/index.js
-    products: state.products
-}))
-export default class ProductsListContainer {
+const ConnectedProductItemContainer = connect(() => ({}))(ProductItemContainer);
+
+class ProductsListContainer {
     render() {
         const { products } = this.props;
 
         const nodes = Object.keys(products).map(id => {
             const product = products[id];
             return (
-                <ProductItemContainer
+                <ConnectedProductItemContainer
                     key={product.id}
                     product={product}
                 />
@@ -51,3 +47,8 @@ export default class ProductsListContainer {
         );
     }
 }
+
+export default connect(state => ({
+    // named in stores/index.js
+    products: state.products
+}))(ProductsListContainer)

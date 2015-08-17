@@ -1,17 +1,24 @@
 import React from 'react';
 import App from './components/App.jsx';
-import { Mapware } from 'fluxette';
-import { hook } from './flux';
+import { Context } from 'fluxette';
+import flux from './flux';
 import { API } from './flux/types';
 import { getProducts } from './flux/async';
 
-hook(Mapware({
-    [API.CHECKOUT.DONE]: action => {
-        let { products } = action;
-        console.log('YOU BOUGHT:', Object.keys(products).map(key => products[key]));
-    }
-}));
+flux.hook((state, actions) => {
+    actions.forEach(action => {
+        if (action.type === API.CHECKOUT.DONE) {
+            let { products } = action;
+            console.log('YOU BOUGHT:', Object.keys(products).map(key => products[key]));
+        }
+    });
+});
 
-getProducts();
+getProducts(flux)();
 
-React.render(<App />, document.getElementById('app'));
+React.render(
+    <Context flux={ flux }>
+        { () => <App /> }
+    </Context>,
+    document.getElementById('app')
+);

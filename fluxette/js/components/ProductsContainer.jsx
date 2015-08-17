@@ -1,26 +1,24 @@
 import React from 'react';
-import { dispatch, connect } from '../flux';
+import { connect, select } from 'fluxette';
 import { cart } from '../flux/creators';
 import ProductItem from '../../../common/components/ProductItem.jsx';
 import ProductsList from '../../../common/components/ProductsList.jsx';
 
-class ProductItemContainer extends React.Component {
-    onAddToCartClicked() {
-        dispatch(cart.add(this.props.product));
-    }
-    render() {
-        return <ProductItem product={ this.props.product } onAddToCartClicked={ ::this.onAddToCartClicked } />;
-    }
-}
-
-@connect(state => {
-    let { products } = state;
-    return Object.keys(products).map(key => products[key]);
-}, 'products')
+@connect(select(
+    state => state.products,
+    products => ({
+        products: Object.keys(products).map(key => products[key])
+    })
+))
 export default class extends React.Component {
     render() {
+        let { dispatch } = this.context.flux;
         let productNodes = this.state.products.map(product =>
-            <ProductItemContainer key={ product.id } product={ product } />);
+            <ProductItem
+                key={ product.id }
+                product={ product }
+                onAddToCartClicked= { () => dispatch(cart.add(product)) }
+            />);
         return <ProductsList title="Flux Shop Demo (Fluxette)">{ productNodes }</ProductsList>;
     }
 }

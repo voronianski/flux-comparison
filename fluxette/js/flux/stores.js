@@ -1,4 +1,4 @@
-import { Reducer, Store } from 'fluxette';
+import { Reducer, Shape } from 'fluxette';
 import { CART, API } from './types';
 
 let products = Reducer([], {
@@ -29,4 +29,4 @@ let cart = Reducer({}, {
     [API.CHECKOUT.REQUEST]: () => ({})
 });
 
-export default Store({ products, cart });
+export default Shape({ products, cart });

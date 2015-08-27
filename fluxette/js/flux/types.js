@@ -1,7 +1,5 @@
 export default {
-    CART: {
-        ADD: 'CART_ADD'
-    },
+    CART: { ADD: 'CART_ADD' },
     API: {
         PRODUCTS: {
             REQUEST: 'API_PRODUCTS_REQUEST',

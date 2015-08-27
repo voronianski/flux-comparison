@@ -16,6 +16,6 @@ import Cart from '../../../common/components/Cart.jsx';
 export default class extends React.Component {
     render() {
         let { cart, total } = this.state;
-        return <Cart products={ cart } total={ total } onCheckoutClicked={ buyProducts(this.context.flux) } />;
+        return <Cart products={ cart } total={ total } onCheckoutClicked={ () => this.context.flux.dispatch(buyProducts) } />;
     }
 }

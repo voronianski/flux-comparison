@@ -1,7 +1,7 @@
-import { Store } from 'fluxette';
+import { Reducer, Shape } from 'fluxette';
 import { CART, API } from './types';
 
-let products = Store([], {
+let products = Reducer([], {
     [API.PRODUCTS.DONE]: (products, action) => action.products,
     [CART.ADD]: (products, action) => {
         let { id } = action.product;
@@ -20,13 +20,13 @@ let products = Store([], {
     }
 });
 
-let cart = Store({}, {
+let cart = Reducer({}, {
     [CART.ADD]: (cart, action) => {
         let { product } = action;
         let { inventory, ...p } = cart[product.id] || product;
         return { ...cart, [p.id]: { ...p, quantity: (p.quantity || 0) + 1 } };
     },
-    [API.CHECKOUT.REQUEST]: cart => ({})
+    [API.CHECKOUT.REQUEST]: () => ({})
 });
 
-export default { products, cart };
+export default Shape({ products, cart });

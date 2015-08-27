@@ -1,9 +1,7 @@
 import { CART, API } from './types';
 
 export default {
-    cart: {
-        add: product => ({ type: CART.ADD, product })
-    },
+    cart: { add: product => ({ type: CART.ADD, product }) },
     api: {
         products: {
             request: () => ({ type: API.PRODUCTS.REQUEST }),

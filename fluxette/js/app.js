@@ -1,19 +1,10 @@
 import React from 'react';
 import App from './components/App.jsx';
-import { Context } from 'fluxette';
-import flux, { dispatch } from './flux';
-import { API } from './flux/types';
-import { getProducts } from './flux/async';
+import { Context } from 'fluxette-react';
+import flux from './flux';
+import { api } from './flux/actions';
 
-flux.hook((state, actions) => {
-    let [bought] = actions.filter(a => a.type === API.CHECKOUT.DONE);
-    if (bought) {
-        let { products } = bought;
-        console.log('YOU BOUGHT:', Object.keys(products).map(key => products[key]));
-    }
-});
-
-dispatch(getProducts);
+flux.dispatch(api.getProducts);
 
 React.render(
     <Context flux={ flux }>

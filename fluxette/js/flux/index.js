@@ -1,7 +1,5 @@
-import Flux, { thunk } from 'fluxette';
-import stores from './stores';
+import Flux from 'fluxette';
+import thunk from 'fluxette-thunk';
+import reducers from './reducers';
 
-let flux = Flux(stores);
-flux.use([thunk]);
-
-export default flux;
+export default Flux(reducers).using(thunk);

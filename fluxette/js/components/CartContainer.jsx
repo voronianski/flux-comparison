@@ -1,6 +1,6 @@
 import React from 'react';
-import { connect, select } from 'fluxette';
-import { buyProducts } from '../flux/async';
+import { connect, select } from 'fluxette-react';
+import { api } from '../flux/actions';
 import Cart from '../../../common/components/Cart.jsx';
 
 @connect(select(
@@ -16,6 +16,6 @@ import Cart from '../../../common/components/Cart.jsx';
 export default class extends React.Component {
     render() {
         let { cart, total } = this.state;
-        return <Cart products={ cart } total={ total } onCheckoutClicked={ () => this.context.flux.dispatch(buyProducts) } />;
+        return <Cart products={ cart } total={ total } onCheckoutClicked={ () => this.dispatch(api.checkout) } />;
     }
 }

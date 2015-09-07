@@ -1,6 +1,6 @@
 import React from 'react';
-import { connect, select } from 'fluxette';
-import { cart } from '../flux/creators';
+import { connect, select } from 'fluxette-react';
+import { cart } from '../flux/actions';
 import ProductItem from '../../../common/components/ProductItem.jsx';
 import ProductsList from '../../../common/components/ProductsList.jsx';
 
@@ -12,12 +12,12 @@ import ProductsList from '../../../common/components/ProductsList.jsx';
 ))
 export default class extends React.Component {
     render() {
-        let { dispatch } = this.context.flux;
+        let { dispatch } = this;
         let productNodes = this.state.products.map(product =>
             <ProductItem
                 key={ product.id }
                 product={ product }
-                onAddToCartClicked= { () => dispatch(cart.add(product)) }
+                onAddToCartClicked={ () => dispatch(cart.add(product)) }
             />);
         return <ProductsList title="Flux Shop Demo (Fluxette)">{ productNodes }</ProductsList>;
     }

@@ -3,11 +3,11 @@ export default {
     API: {
         PRODUCTS: {
             REQUEST: 'API_PRODUCTS_REQUEST',
-            DONE: 'API_PRODUCTS_DONE'
+            SUCCESS: 'API_PRODUCTS_SUCCESS'
         },
         CHECKOUT: {
             REQUEST: 'API_CHECKOUT_REQUEST',
-            DONE: 'API_CHECKOUT_DONE'
+            SUCCESS: 'API_CHECKOUT_SUCCESS'
         }
     }
 };

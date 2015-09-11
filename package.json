@@ -23,6 +23,7 @@
     "fluxette-react": "^0.19.1",
     "fluxette-thunk": "0.0.2",
     "fluxible": "^0.3.0",
+    "fluxxor": "^1.7.1",
     "lux.js": "^0.7.3",
     "marty": "^0.9.0",
     "material-flux": "^1.1.1",

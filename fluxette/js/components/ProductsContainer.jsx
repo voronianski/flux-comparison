@@ -13,12 +13,20 @@ import ProductsList from '../../../common/components/ProductsList.jsx';
 export default class extends React.Component {
     render() {
         let { dispatch } = this;
-        let productNodes = this.state.products.map(product =>
-            <ProductItem
-                key={ product.id }
-                product={ product }
-                onAddToCartClicked={ () => dispatch(cart.add(product)) }
-            />);
-        return <ProductsList title="Flux Shop Demo (Fluxette)">{ productNodes }</ProductsList>;
+        let productNodes = this.state.products.map(product => {
+            return (
+                <ProductItem
+                    key={product.id}
+                    product={product}
+                    onAddToCartClicked={() => dispatch(cart.add(product))}
+                />
+            );
+        });
+
+        return (
+            <ProductsList title="Flux Shop Demo (Fluxette)">
+                {productNodes}
+            </ProductsList>
+        );
     }
 }

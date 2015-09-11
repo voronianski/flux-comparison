@@ -5,7 +5,6 @@ import assign from 'object-assign';
 const products = new Map();
 
 const CartStore = Fluxxor.createStore({
-
     initialize() {
         this.bindActions(
             Constants.ADD_TO_CART, this.onAddToCart,

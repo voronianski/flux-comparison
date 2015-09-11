@@ -1,10 +1,10 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import connect from '../utils/Connect';
 
 import ProductItem from '../../../common/components/ProductItem.jsx';
 import ProductsList from '../../../common/components/ProductsList.jsx';
 
-class ProductItemContainer extends Component {
+class ProductItemContainer extends React.Component {
     constructor(props) {
         super(props);
 
@@ -31,7 +31,7 @@ ProductItemContainer.propTypes = {
     })
 };
 
-class ProductsListContainer extends Component {
+class ProductsListContainer extends React.Component {
     constructor(props) {
         super(props);
     }

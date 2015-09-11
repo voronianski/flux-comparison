@@ -1,8 +1,8 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import CartContainer from './CartContainer.jsx';
 import ProductsContainer from './ProductsContainer.jsx';
 
-class App extends Component {
+class App extends React.Component {
     constructor(props) {
         super(props);
     }

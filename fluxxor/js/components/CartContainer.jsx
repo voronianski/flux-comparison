@@ -1,8 +1,8 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import Cart from '../../../common/components/Cart.jsx';
 import connect from '../utils/Connect';
 
-class CartContainer extends Component {
+class CartContainer extends React.Component {
     constructor(props) {
         super(props);
 

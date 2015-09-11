@@ -22,4 +22,4 @@ export default function (Component, stores, getState) {
     });
 
     return ConnectedComponent;
-};
+}

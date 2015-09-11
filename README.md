@@ -40,6 +40,7 @@ The list of Flux related implementations used in this demo.
 * [x] [Redux](https://github.com/voronianski/flux-comparison/tree/master/redux)
 * [x] [Nuclear.js](https://github.com/voronianski/flux-comparison/tree/master/nuclear-js)
 * [x] [Fluxette](https://github.com/voronianski/flux-comparison/tree/master/fluxette)
+* [x] [Fluxxor](https://github.com/voronianski/flux-comparison/tree/master/fluxxor)
 
 ### Next
 
@@ -61,6 +62,7 @@ _You're welcome to create [issues](https://github.com/voronianski/flux-compariso
 - https://github.com/gaearon/redux
 - https://optimizely.github.io/nuclear-js
 - https://github.com/edge/fluxette
+- https://github.com/BinaryMuse/fluxxor
 
 ### Articles
 

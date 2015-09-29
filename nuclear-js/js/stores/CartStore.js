@@ -42,7 +42,7 @@ function beginCheckout(state) {
         .set('pendingCheckout', currentItems);
 }
 
-function finishCheckout(state) {
+function finishCheckout() {
     return initialState;
 }
 

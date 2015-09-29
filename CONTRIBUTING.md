@@ -18,6 +18,15 @@ You're free to choose whether you want to use latest _ECMAScript6_ features (the
 - use semicolons
 - don't use comma-first notation
 
+You can run
+
+```
+npm install
+npm run lint
+```
+
+in the root directory to make sure that your coding style matches these rules.
+
 ##### These tools will help your IDE to remind you with some of the rules listed above:
 
 - [EditorConfig](http://editorconfig.org)

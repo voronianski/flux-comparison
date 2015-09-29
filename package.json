@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "Flux architecture samples and solutions",
   "scripts": {
-    "build": "NODE_ENV=production browserify ./facebook-flux/js/app.js | uglifyjs -cm > ./facebook-flux/build/bundle.min.js"
+    "build": "NODE_ENV=production browserify ./facebook-flux/js/app.js | uglifyjs -cm > ./facebook-flux/build/bundle.min.js",
+    "lint": "eslint ."
   },
   "keywords": [
     "react",

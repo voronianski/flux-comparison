@@ -2,7 +2,7 @@ import ActionTypes from '../constants/ActionTypes';
 import shop from '../../../common/api/shop';
 
 export function getAllProducts() {
-    return (dispatch, getState) => {
+    return (dispatch) => {
         dispatch({
             type: ActionTypes.GET_ALL_PRODUCTS
         });
@@ -28,7 +28,7 @@ export function addToCart(product) {
 }
 
 export function beginCheckout(products) {
-    return (dispatch, getState) => {
+    return (dispatch) => {
         dispatch({
             type: ActionTypes.BEGIN_CHECKOUT
         });

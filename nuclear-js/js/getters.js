@@ -1,7 +1,7 @@
 const products = [
     ['products'],
     products => {
-      return products.toList().toJS();
+        return products.toList().toJS();
     }
 ];
 

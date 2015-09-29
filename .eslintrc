@@ -16,6 +16,9 @@
     "no-unused-vars": 1,
     "no-unused-expressions": 0,
     "react/jsx-no-undef": 2,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/react-in-jsx-scope": 2,
     "new-cap": 0,
     "no-shadow": 0,
     "no-use-before-define": 0

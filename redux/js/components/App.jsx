@@ -1,4 +1,4 @@
-import React from 'react'; // eslint-disable-line no-unused-vars
+import React from 'react';
 import { connect } from 'react-redux';
 import ProductsContainer from './ProductsContainer.jsx';
 import CartContainer from './CartContainer.jsx';

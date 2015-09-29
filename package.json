@@ -44,6 +44,7 @@
     "envify": "^3.2.0",
     "reactify": "^0.17.1",
     "uglify-js": "^2.4.16",
+    "util-deprecate": "^1.0.1",
     "watchify": "^2.2.1"
   },
   "browserify": {

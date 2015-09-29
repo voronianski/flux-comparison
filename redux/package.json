@@ -1,4 +1,5 @@
 {
+  "name": "flux-comparison-redux",
   "main": "js/app.js",
   "scripts": {
     "start": "../node_modules/.bin/watchify . -o build/bundle.js -v -d",

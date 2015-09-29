@@ -32,11 +32,8 @@
     "nuclear-js": "^1.0.5",
     "object-assign": "^2.0.0",
     "react": "^0.13.0",
-    "react-redux": "^0.2.2",
     "react-router": "^0.13.0",
     "reducer": "^0.19.2",
-    "redux": "^1.0.0-rc",
-    "redux-thunk": "^0.1.0",
     "reflux": "^0.2.4"
   },
   "devDependencies": {

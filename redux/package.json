@@ -1,8 +1,9 @@
 {
+  "name": "flux-comparison-redux",
   "main": "js/app.js",
   "scripts": {
-    "start": "../node_modules/watchify/bin/cmd.js . -o build/bundle.js -v -d",
-    "build": "browserify js/app.js > build/bundle.js"
+    "start": "../node_modules/.bin/watchify . -o build/bundle.js -v -d",
+    "build": "../node_modules/.bin/browserify js/app.js > build/bundle.js"
   },
   "browserify": {
     "transform": [
@@ -19,6 +20,10 @@
     ]
   },
   "dependencies": {
-    "keymirror": "^0.1.1"
+    "keymirror": "^0.1.1",
+    "react": "^0.13.0",
+    "react-redux": "^0.2.2",
+    "redux": "^1.0.0-rc",
+    "redux-thunk": "^0.1.0"
   }
 }

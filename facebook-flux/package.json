@@ -9,5 +9,7 @@
       "envify"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "keymirror": "^0.1.1"
+  }
 }

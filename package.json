@@ -15,8 +15,6 @@
   "dependencies": {
     "alt": "^0.14.2",
     "array.prototype.find": "^1.0.0",
-    "babel-runtime": "^5.8.3",
-    "babelify": "^6.1.2",
     "es5-shim": "^4.0.6",
     "flummox": "~2.13.1",
     "flux": "^2.0.3",
@@ -32,18 +30,19 @@
     "nuclear-js": "^1.0.5",
     "object-assign": "^2.0.0",
     "react": "^0.13.0",
-    "react-router": "^0.13.0",
     "reducer": "^0.19.2",
     "reflux": "^0.2.4"
   },
   "devDependencies": {
-    "babel": "^5.6.14",
-    "browserify": "^8.0.3",
+    "babel": "^5.8.23",
+    "babel-runtime": "^5.8.3",
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0",
     "envify": "^3.2.0",
     "reactify": "^0.17.1",
     "uglify-js": "^2.4.16",
     "util-deprecate": "^1.0.1",
-    "watchify": "^2.2.1"
+    "watchify": "^3.4.0"
   },
   "browserify": {
     "transform": [

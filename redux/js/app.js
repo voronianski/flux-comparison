@@ -1,16 +1,20 @@
 import React from 'react';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import * as reducers from './reducers/index';
-import * as ActionCreators from './actions/ActionCreators';
+import reducer from './reducers';
+import { getAllProducts } from './actions';
 import App from './components/App.jsx';
 
-const reducer = combineReducers(reducers);
-const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
+const middleware = process.env.NODE_ENV === 'production' ?
+  [thunk] :
+  [thunk, logger()];
 
+const createStoreWithMiddleware = applyMiddleware(...middleware)(createStore);
 const store = createStoreWithMiddleware(reducer);
-store.dispatch(ActionCreators.getAllProducts());
+
+store.dispatch(getAllProducts());
 
 React.render(
     <Provider store={store}>

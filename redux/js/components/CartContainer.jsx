@@ -1,32 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { beginCheckout } from '../actions/ActionCreators';
-import { getTotal } from '../reducers/cart';
+import { checkout } from '../actions';
+import { getTotal, getCartProducts } from '../reducers';
 import Cart from '../../../common/components/Cart.jsx';
 
-class CartContainer {
-    onCheckoutClicked() {
-        return beginCheckout(this.props.products);
-    }
-
+class CartContainer extends Component {
     render() {
         const { products, total, dispatch } = this.props;
         return (
             <Cart
                 products={products}
                 total={total}
-                {...bindActionCreators({
-                    onCheckoutClicked: this.onCheckoutClicked.bind(this)
-                }, dispatch)}
+                onCheckoutClicked={() => this.props.checkout()}
             />
         );
     }
 }
 
-export default connect(state => {
+function mapStateToProps(state) {
     return {
-        products: Object.keys(state.cart).map(key => state.cart[key]),
-        total: getTotal(state.cart)
+        products: getCartProducts(state),
+        total: getTotal(state)
     };
-})(CartContainer);
+}
+
+export default connect(
+    mapStateToProps,
+    { checkout }
+)(CartContainer);

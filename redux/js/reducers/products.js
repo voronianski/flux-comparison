@@ -1,29 +1,58 @@
-import { RECEIVE_PRODUCTS, ADD_TO_CART } from '../constants/ActionTypes';
+import { combineReducers } from 'redux';
+import { RECEIVE_PRODUCTS, ADD_TO_CART } from '../actions';
 
-function _decreaseInventory (product) {
-    product.inventory = product.inventory > 0 ? product.inventory - 1 : 0;
-}
-
-export default function handle(state = {}, action) {
-    let newState = Object.assign({}, state);
-
+function product(state, action) {
     switch (action.type) {
-        case RECEIVE_PRODUCTS:
-            for (let product of action.products) {
-                newState[product.id] = product;
-            }
-            return newState;
-
         case ADD_TO_CART:
-            _decreaseInventory(newState[action.product.id]);
-            return newState;
-
+            return {
+                ...state,
+                inventory: state.inventory - 1
+            };
         default:
             return state;
     }
+}
 
-    // from the redux README:
-    // BUT THAT'S A SWITCH STATEMENT!
-    // Right. If you hate 'em, see the FAQ below.
-    // https://github.com/gaearon/redux#but-there-are-switch-statements
+function byId(state = {}, action) {
+    switch (action.type) {
+        case RECEIVE_PRODUCTS:
+            return {
+                ...state,
+                ...action.products.reduce((obj, product) => {
+                    obj[product.id] = product;
+                    return obj;
+                }, {})
+            };
+        default:
+            const { productId } = action;
+            if (productId) {
+                return {
+                    ...state,
+                    [productId]: product(state[productId], action)
+                };
+            }
+            return state;
+    }
+}
+
+function visibleIds(state = [], action) {
+    switch (action.type) {
+        case RECEIVE_PRODUCTS:
+            return action.products.map(product => product.id);
+        default:
+            return state;
+    }
+}
+
+export default combineReducers({
+    byId,
+    visibleIds
+});
+
+export function getProduct(state, id) {
+    return state.byId[id];
+}
+
+export function getVisibleProducts(state) {
+    return state.visibleIds.map(id => getProduct(state, id));
 }

@@ -1,9 +1,8 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'react';
 import ProductsContainer from './ProductsContainer.jsx';
 import CartContainer from './CartContainer.jsx';
 
-class App {
+export default class App extends Component {
     render() {
         return (
             <div>
@@ -13,5 +12,3 @@ class App {
         );
     }
 }
-
-export default connect(() => ({}))(App);

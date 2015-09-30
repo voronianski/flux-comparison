@@ -1,50 +1,56 @@
-import { ADD_TO_CART, BEGIN_CHECKOUT, SUCCESS_CHECKOUT } from '../constants/ActionTypes';
+import {
+    ADD_TO_CART,
+    CHECKOUT_REQUEST, CHECKOUT_FAILURE
+} from '../actions';
 
-function _addToCart (state, product) {
-    let cartProduct = Object.assign({}, product);
-    let { id } = cartProduct;
+const initialState = {
+    addedIds: [],
+    quantityById: {}
+};
 
-    cartProduct.quantity = id in state ? state[id].quantity + 1 : 1;
-    delete cartProduct.inventory;
-
-    state[id] = cartProduct;
-}
-
-export function getTotal(state) {
-    let total = 0;
-    for (let id in state) {
-        let product = state[id];
-        total += product.price * product.quantity;
-    }
-    return total.toFixed(2);
-}
-
-// can be improve with ImmutableJS
-export default function handle(state = {}, action) {
-    let newState = Object.assign({}, state);
-
+function addedIds(state = initialState.addedIds, action) {
     switch (action.type) {
         case ADD_TO_CART:
-            // https://github.com/gaearon/redux#what-about-waitfor
-            // AppDispatcher.waitFor([ProductStore.dispatchToken]);
-            _addToCart(newState, Object.assign({}, action.product));
-            return newState;
-
-        case BEGIN_CHECKOUT:
-            newState = {};
-            return newState;
-
-        case SUCCESS_CHECKOUT:
-            // this can be used to redirect to success page, etc.
-            console.log('YOU BOUGHT:', action.products);
-            return {};
-
+            if (state.indexOf(action.productId) !== -1) {
+                return state;
+            }
+            return [...state, action.productId];
         default:
-            return state;
+            return state;    
     }
+}
 
-    // from the redux README:
-    // BUT THAT'S A SWITCH STATEMENT!
-    // Right. If you hate 'em, see the FAQ below.
-    // https://github.com/gaearon/redux#but-there-are-switch-statements
+function quantityById(state = initialState.quantityById, action) {
+    switch (action.type) {
+        case ADD_TO_CART:
+            const { productId } = action;
+            return {
+                ...state,
+                [productId]: (state[productId] || 0) + 1
+            };
+        default:
+            return state;    
+    }
+}
+
+export default function cart(state = initialState, action) {
+    switch (action.type) {
+        case CHECKOUT_REQUEST:
+            return initialState;
+        case CHECKOUT_FAILURE:
+            return action.cart;
+        default:
+            return {
+                addedIds: addedIds(state.addedIds, action),
+                quantityById: quantityById(state.quantityById, action)
+            };
+    }
+}
+
+export function getQuantity(state, productId) {
+    return state.quantityById[productId] || 0;
+}
+
+export function getAddedIds(state) {
+    return state.addedIds;
 }

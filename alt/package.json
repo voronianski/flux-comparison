@@ -10,5 +10,7 @@
       "envify"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "alt": "^0.14.2"
+  }
 }

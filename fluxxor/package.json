@@ -10,5 +10,7 @@
       "envify"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "fluxxor": "^1.7.1"
+  }
 }

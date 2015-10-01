@@ -18,5 +18,7 @@
       "envify"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "flummox": "~2.13.1"
+  }
 }

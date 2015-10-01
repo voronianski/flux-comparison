@@ -6,9 +6,11 @@
   },
   "browserify": {
     "transform": [
-      "reactify",
+      "babelify",
       "envify"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "lux.js": "^0.7.3"
+  }
 }

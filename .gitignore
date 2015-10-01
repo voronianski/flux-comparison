@@ -3,16 +3,4 @@ node_modules
 bower_components
 *.log
 
-facebook-flux/build/*.js
-yahoo-fluxible/build/*.js
-reflux/build/*.js
-alt/build/*.js
-mcfly/build/*.js
-marty/build/*.js
-flummox/build/*.js
-lux/build/*.js
-material-flux/build/*.js
-nuclear-js/build/*.js
-redux/build/*.js
-fluxette/build/*.js
-fluxxor/build/*.js
+**/build/*.js

@@ -13,7 +13,6 @@ var ProductStore = McFly.createStore({
         return _products;
     }
 }, function (payload) {
-
     switch (payload.actionType) {
         case 'RECEIVE_PRODUCTS':
             _products = payload.products;
@@ -25,7 +24,6 @@ var ProductStore = McFly.createStore({
             break;
         default:
     }
-
 });
 
 module.exports = ProductStore;

@@ -10,5 +10,7 @@
       "envify"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "marty": "^0.9.0"
+  }
 }

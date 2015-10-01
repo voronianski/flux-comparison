@@ -18,5 +18,7 @@
       "envify"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "material-flux": "^1.1.1"
+  }
 }

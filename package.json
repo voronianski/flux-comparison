@@ -2,6 +2,9 @@
   "name": "flux-samples",
   "version": "0.1.0",
   "description": "Flux architecture samples and solutions",
+  "scripts": {
+    "lint": "eslint ."
+  },
   "keywords": [
     "react",
     "flux",
@@ -20,6 +23,7 @@
     "babelify": "^6.3.0",
     "browserify": "^11.2.0",
     "envify": "^3.2.0",
+    "eslint": "^1.5.1",
     "reactify": "^1.1.1",
     "uglify-js": "^2.4.16",
     "util-deprecate": "^1.0.1",

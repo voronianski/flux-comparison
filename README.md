@@ -8,7 +8,12 @@
 
 Clone this repo and run `npm install` inside it.
 
-Before checking any of the included apps you will need to build its' Javascript resources with [Browserify](http://browserify.org/) by running `npm start` inside concrete app folder.
+Before checking any of the included solutions you will need to:
+
+0. Go to solution folder (e.g. `cd facebook-flux`, `cd redux`, etc.)
+1. Run `npm install` to install dependencies of a specific app
+2. Run `npm start` to build js resources with [Browserify](http://browserify.org)
+3. Open `index.html` in the browser
 
 ## Demo
 

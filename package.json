@@ -1,7 +1,7 @@
 {
-  "name": "flux-samples",
+  "name": "flux-comparison",
   "version": "0.1.0",
-  "description": "Flux architecture samples and solutions",
+  "description": "Practical comparison of different Flux solutions",
   "scripts": {
     "lint": "eslint ."
   },

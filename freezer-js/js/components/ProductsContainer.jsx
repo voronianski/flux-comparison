@@ -3,7 +3,6 @@
 var React = require('react');
 var ProductItem = require('../../../common/components/ProductItem.jsx');
 var ProductsList = require('../../../common/components/ProductsList.jsx');
-
 var State = require('../State');
 
 var ProductsListContainer = React.createClass({
@@ -20,7 +19,8 @@ var ProductsListContainer = React.createClass({
                 <ProductItem
                     key={product.id}
                     product={product}
-                    onAddToCartClicked={me.onAddToCartClicked(product)} />
+                    onAddToCartClicked={me.onAddToCartClicked(product)}
+                />
             );
         });
 

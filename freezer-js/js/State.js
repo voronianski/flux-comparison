@@ -3,12 +3,12 @@
 var Freezer = require('freezer-js');
 
 var State = new Freezer({
-	status: 'loading',
-	cart: {
+    status: 'loading',
+    cart: {
         status: 'ready',
         products: []
     },
-	products: []
+    products: []
 });
 
 module.exports = State;

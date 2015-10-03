@@ -4,8 +4,8 @@ var State = require('../State');
 var shop = require('../../../common/api/shop');
 
 State
-    .on('products:fetch', function (products) {
-    	State.get().set({status: 'loading'});
+    .on('products:fetch', function () {
+        State.get().set({status: 'loading'});
 
         shop.getProducts(function(products) {
             State.get().set({
@@ -45,8 +45,7 @@ State
 
             product.set({inventory: product.inventory - 1});
         }
-    })
-;
+    });
 
 function findInCart (cart, id) {
     var found = false;
@@ -62,6 +61,3 @@ function findInCart (cart, id) {
 
     return found;
 }
-
-
-

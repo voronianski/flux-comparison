@@ -20,7 +20,7 @@ var CartContainer = React.createClass({
         });
 
         return (
-            <Cart products={cart.products} total={'' + total} onCheckoutClicked={this.onCheckoutClicked} />
+            <Cart products={cart.products} total={total.toFixed(2)} onCheckoutClicked={this.onCheckoutClicked} />
         );
     }
 });

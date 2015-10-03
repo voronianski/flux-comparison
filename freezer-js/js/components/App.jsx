@@ -9,16 +9,18 @@ var App = React.createClass({
     render: function () {
         var state = State.get();
 
-        if (state.status == 'loading')
+        if (state.status == 'loading') {
             return <div>Loading</div>;
+        }
 
         return (
             <div>
-                <ProductsContainer products={ state.products } />
-                <CartContainer cart={ state.cart } />
+                <ProductsContainer products={state.products} />
+                <CartContainer cart={state.cart} />
             </div>
         );
     },
+
     componentDidMount: function () {
         var me = this;
 

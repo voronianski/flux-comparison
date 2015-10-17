@@ -13,9 +13,9 @@ export function checkoutSucceeded({ cart }) {}
 export function checkoutFailed({ cart }) {}
 
 export function checkout({ products }, { currentActionSet }) {
-    const cart = currentActionSet.getConsensus.getCart().toArray()[0];
+    const cart = currentActionSet.getConsensus.getCart().singleton();
 
-    currentActionSet.checkoutRequested({});
+    currentActionSet.checkoutRequested();
     shop.buyProducts(products, () => {
         currentActionSet.checkoutSucceeded({ cart });
         // Replace the line above with line below to rollback on failure:
@@ -25,4 +25,4 @@ export function checkout({ products }, { currentActionSet }) {
 
 export const introspection = {
     getCart() {}
-}
+};

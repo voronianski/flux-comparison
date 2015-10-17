@@ -2,28 +2,20 @@ import combineReducers from './combineReducers';
 
 
 const product = {
-  Cart: {
-    productAddedToCart(state, { productId }) {
-      return {
-          ...state,
-          inventory: state.inventory - 1
-      };
-   }
- },
-
-  Products: {
-    introspection: {
-      hasInventoryOfProduct(state, { productId }) {
-        return state.inventory > 0;
-      }
+    Cart: {
+        productAddedToCart(state, { productId }) {
+            return {
+                ...state,
+                inventory: state.inventory - 1
+            };
+        }
     }
-  }
 };
 
 const byId = {
-  getInitialState() {
-    return {};
-  },
+    getInitialState() {
+        return {};
+    },
 
   Products: {
     receiveProducts(state, { products }) {
@@ -37,9 +29,13 @@ const byId = {
     },
 
     introspection: {
-      getProduct(state, { productId }) {
-        return state[productId];
-      }
+        getProduct(state, { productId }) {
+            return state[productId];
+        },
+
+        hasInventoryOfProduct(state, { productId }) {
+            return !!state[productId] && state[productId].inventory > 0;
+        }
     }
   },
 

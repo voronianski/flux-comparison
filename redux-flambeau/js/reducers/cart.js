@@ -1,4 +1,4 @@
-import combineReducers from './combineReducers';
+import { combineReducers } from 'flambeau';
 
 
 const addedIds = {

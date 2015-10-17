@@ -20,7 +20,7 @@
     ]
   },
   "dependencies": {
-    "flambeau": "^0.6.0",
+    "flambeau": "^0.7.0",
     "react-redux": "^3.0.1",
     "redux": "^3.0.2",
     "redux-thunk": "^1.0.0"

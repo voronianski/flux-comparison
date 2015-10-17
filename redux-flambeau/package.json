@@ -1,0 +1,31 @@
+{
+  "name": "flux-comparison-redux",
+  "main": "js/app.js",
+  "scripts": {
+    "start": "../node_modules/.bin/watchify . -o build/bundle.js -v -d",
+    "build": "../node_modules/.bin/browserify js/app.js > build/bundle.js"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "stage": 2,
+          "optional": [
+            "runtime"
+          ]
+        }
+      ],
+      "envify"
+    ]
+  },
+  "dependencies": {
+    "flambeau": "^0.6.0",
+    "react-redux": "^3.0.1",
+    "redux": "^3.0.2",
+    "redux-thunk": "^1.0.0"
+  },
+  "devDependencies": {
+    "redux-logger": "^2.0.1"
+  }
+}

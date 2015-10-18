@@ -1,7 +1,6 @@
 import shop from '../../../common/api/shop';
 
-
-export function productAddedToCart({ productId }) {}
+export function productAddedToCart({ productId }) {} // eslint-disable-line no-unused-vars
 export function addToCart({ productId }, { allActionSets: { Products }, currentActionSet }) {
     if (Products.getConsensus.hasInventoryOfProduct({ productId }).some()) {
         currentActionSet.productAddedToCart({ productId });
@@ -9,8 +8,8 @@ export function addToCart({ productId }, { allActionSets: { Products }, currentA
 }
 
 export function checkoutRequested() {}
-export function checkoutSucceeded({ cart }) {}
-export function checkoutFailed({ cart }) {}
+export function checkoutSucceeded({ cart }) {} // eslint-disable-line no-unused-vars
+export function checkoutFailed({ cart }) {} // eslint-disable-line no-unused-vars
 
 export function checkout({ products }, { currentActionSet }) {
     const cart = currentActionSet.getConsensus.getCart().singleton();

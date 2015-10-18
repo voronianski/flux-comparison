@@ -1,7 +1,6 @@
 import shop from '../../../common/api/shop';
 
-
-export function receiveProducts({ products }) {}
+export function receiveProducts({ products }) {} // eslint-disable-line no-unused-vars
 export function getAllProducts(payload, { currentActionSet }) {
     shop.getProducts(products => {
         currentActionSet.receiveProducts({ products });
@@ -9,6 +8,6 @@ export function getAllProducts(payload, { currentActionSet }) {
 }
 
 export const introspection = {
-  getProduct({ productId }) {},
-  hasInventoryOfProduct({ productId }) {}
+    getProduct({ productId }) {}, // eslint-disable-line no-unused-vars
+    hasInventoryOfProduct({ productId }) {} // eslint-disable-line no-unused-vars
 };

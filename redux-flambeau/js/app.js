@@ -5,13 +5,12 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import reducer from './reducers';
-//import { getAllProducts } from './actions';
 import actionSets from './actions';
 import App from './components/App.jsx';
 
 const middleware = process.env.NODE_ENV === 'production' ?
-  [thunk] :
-  [thunk, logger()];
+    [thunk] :
+    [thunk, logger()];
 
 const createStoreWithMiddleware = applyMiddleware(...middleware)(createStore);
 const store = createStoreWithMiddleware(reducer);

@@ -1,6 +1,5 @@
 import { combineReducers } from 'flambeau';
 
-
 const addedIds = {
     getInitialState() {
         return [];
@@ -37,7 +36,7 @@ export default combineReducers({
 }, {
     alsoAdd: (combined) => ({
         Cart: {
-            checkoutRequested(state) {
+            checkoutRequested() {
                 return combined.getInitialState();
             },
 

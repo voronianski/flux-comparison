@@ -8,8 +8,8 @@ import { getAllProducts } from './actions';
 import App from './components/App.jsx';
 
 const middleware = process.env.NODE_ENV === 'production' ?
-  [thunk] :
-  [thunk, logger()];
+    [thunk] :
+    [thunk, logger()];
 
 const createStoreWithMiddleware = applyMiddleware(...middleware)(createStore);
 const store = createStoreWithMiddleware(reducer);

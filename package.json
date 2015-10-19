@@ -24,6 +24,7 @@
     "browserify": "^11.2.0",
     "envify": "^3.2.0",
     "eslint": "^1.5.1",
+    "eslint-plugin-react": "^3.6.2",
     "reactify": "^1.1.1",
     "uglify-js": "^2.4.16",
     "util-deprecate": "^1.0.1",

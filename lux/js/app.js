@@ -7,6 +7,7 @@ require('babel/polyfill');
 var React = require('react');
 var lux = require('lux.js');
 var App = require('./components/App.jsx');
+require('./utils/WebAPIUtils');
 
 lux.publishAction('getAllProducts');
 

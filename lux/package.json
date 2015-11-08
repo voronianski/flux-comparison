@@ -11,6 +11,6 @@
     ]
   },
   "dependencies": {
-    "lux.js": "^0.7.3"
+    "lux.js": "^0.8.0"
   }
 }

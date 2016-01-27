@@ -87,6 +87,7 @@ The [flux demo app](http://labs.voronianski.com/flux-comparison/) was also imple
 * [Riot + RiotControl](https://github.com/txchen/feplay/tree/gh-pages/riot_flux)
 * [flux-riot demo](https://github.com/mingliangfeng/flux-riot-demo)
 * [idom-redux-todomvc-app (incremental-dom + redux)](https://github.com/joshthecoder/idom-redux-todomvc-app)
+* [Polymer with Reflux](https://github.com/devinivy/polymer-funky-flux)
 
 ## Contributing
 

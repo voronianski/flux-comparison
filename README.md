@@ -48,6 +48,7 @@ The list of Flux related implementations used in this demo.
 * [x] [Fluxette](https://github.com/voronianski/flux-comparison/tree/master/fluxette)
 * [x] [Fluxxor](https://github.com/voronianski/flux-comparison/tree/master/fluxxor)
 * [x] [Freezer](https://github.com/voronianski/flux-comparison/tree/master/freezer-js)
+* [x] [Fluxury](https://github.com/voronianski/flux-comparison/tree/master/fluxury)
 
 ### Next
 
@@ -72,6 +73,7 @@ _You're welcome to create [issues](https://github.com/voronianski/flux-compariso
 - https://github.com/edge/fluxette
 - https://github.com/BinaryMuse/fluxxor
 - https://github.com/arqex/freezer
+- https://github.com/FunctionFoundry/fluxury
 
 ### Articles
 

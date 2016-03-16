@@ -3,7 +3,7 @@
 var React = require('react');
 var Cart = require('../../../common/components/Cart.jsx');
 var CartStore = require('../stores/CartStore');
-var ActionCreators = require('../actions/ActionCreators');
+var cartCheckout = require('../actions/ActionCreators').cartCheckout;
 var connectStoreMixin = require('react-fluxury').connectStoreMixin;
 
 var CartContainer = React.createClass({
@@ -14,7 +14,7 @@ var CartContainer = React.createClass({
         if (!this.state.products.length) {
             return;
         }
-        ActionCreators.cartCheckout(this.state.products);
+        cartCheckout(this.state.products);
     },
 
     render: function () {

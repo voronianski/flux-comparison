@@ -24,5 +24,4 @@ var ProductStore = createStore(
   }
 )
 
-window.ProductStore = ProductStore
 module.exports = ProductStore

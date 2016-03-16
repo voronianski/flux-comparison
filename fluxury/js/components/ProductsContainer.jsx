@@ -4,13 +4,13 @@ var React = require('react');
 var ProductItem = require('../../../common/components/ProductItem.jsx');
 var ProductsList = require('../../../common/components/ProductsList.jsx');
 var ProductStore = require('../stores/ProductStore');
-var ActionCreators = require('../actions/ActionCreators');
+var addToCart = require('../actions/ActionCreators').addToCart;
 var connectStoreMixin = require('react-fluxury').connectStoreMixin;
 
 var ProductItemContainer = React.createClass({
 
     onAddToCartClicked: function () {
-        ActionCreators.addToCart(this.props.product);
+        addToCart(this.props.product);
     },
 
     render: function () {

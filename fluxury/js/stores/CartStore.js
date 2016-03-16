@@ -20,13 +20,19 @@ var CartStore = createStore(
       if (count === 1) { // add quanity to cart
         updatedProducts = state.products.map(n => {
             if (n.id === product.id) {
-              return Object.assign({}, n, { quantity: n.quantity+1 });
+              return Object.assign({}, n, {
+                quantity: n.quantity+1,
+                inventory: n.inventory-1
+              });
             }
             return n;
         })
       } else { // put item into cart
         updatedProducts = state.products.concat(
-            Object.assign( {}, product, { quantity: 1 } )
+            Object.assign( {}, product, {
+              quantity: 1,
+              inventory: product.inventory-1
+            })
         )
       }
 
@@ -42,7 +48,7 @@ var CartStore = createStore(
     },
     cartCheckout: (state, data) => ({
       products: [], // only products in the cart
-      total: 0
+      total: "0.00"
     }),
     finishCheckout: (state, products) => {
       console.log('YOU BOUGHT:', products);

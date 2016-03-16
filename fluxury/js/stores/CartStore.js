@@ -48,7 +48,7 @@ var CartStore = createStore(
     },
     cartCheckout: (state, data) => ({
       products: [], // only products in the cart
-      total: "0.00"
+      total: '0.00'
     }),
     finishCheckout: (state, products) => {
       console.log('YOU BOUGHT:', products);

@@ -91,6 +91,7 @@ The [flux demo app](http://labs.voronianski.com/flux-comparison/) was also imple
 * [idom-redux-todomvc-app (incremental-dom + redux)](https://github.com/joshthecoder/idom-redux-todomvc-app)
 * [Polymer with Reflux](https://github.com/devinivy/polymer-funky-flux)
 * [Vuex](https://github.com/vuejs/vuex/tree/master/examples/shopping-cart)
+* [@ngrx: Redux implemention for Angular](https://github.com/ngrx/platform)
 
 ## Contributing
 

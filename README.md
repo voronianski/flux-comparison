@@ -19,7 +19,7 @@ Before checking any of the included solutions you will need to:
 
 Select several products from _Flux Online Shop_ and add them to cart. Open browser console and click _Checkout_ button, you'll see payload with products that you just "bought".
 
-[![](https://dl.dropboxusercontent.com/u/100463011/flux-shop-demo2.gif)](http://labs.voronianski.com/flux-comparison)
+[![](https://user-images.githubusercontent.com/974035/29128516-55323824-7d24-11e7-9d5c-777cbd6416d8.gif)](http://labs.voronianski.com/flux-comparison)
 
 http://labs.voronianski.com/flux-comparison
 

@@ -19,9 +19,9 @@ Before checking any of the included solutions you will need to:
 
 Select several products from _Flux Online Shop_ and add them to cart. Open browser console and click _Checkout_ button, you'll see payload with products that you just "bought".
 
-[![](https://user-images.githubusercontent.com/974035/29128516-55323824-7d24-11e7-9d5c-777cbd6416d8.gif)](http://labs.voronianski.com/flux-comparison)
+[![](https://user-images.githubusercontent.com/974035/29128516-55323824-7d24-11e7-9d5c-777cbd6416d8.gif)](http://labs.voronianski.dev/flux-comparison)
 
-http://labs.voronianski.com/flux-comparison
+http://labs.voronianski.dev/flux-comparison
 
 **You may find few notes about all implementations on my [blog](http://pixelhunter.me/post/110248593059/flux-solutions-compared-by-example).**
 
@@ -84,7 +84,7 @@ _You're welcome to create [issues](https://github.com/voronianski/flux-compariso
 
 ### Non React.js examples
 
-The [flux demo app](http://labs.voronianski.com/flux-comparison/) was also implemented by enthusiasts without React.js but with another view layer:
+The [flux demo app](http://labs.voronianski.dev/flux-comparison/) was also implemented by enthusiasts without React.js but with another view layer:
 
 * [Riot + RiotControl](https://github.com/txchen/feplay/tree/gh-pages/riot_flux)
 * [flux-riot demo](https://github.com/mingliangfeng/flux-riot-demo)
